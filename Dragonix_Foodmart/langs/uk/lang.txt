@@ -1,0 +1,642 @@
+<?php
+// The character set we should use for this language. If you are unsure, use ISO-8859-1
+$charset = "ISO-8859-1";
+
+// first some values that can also be used further along in this lang file
+// database values for orders
+$txt['frontpage1'] = 'More information';
+
+$txt['db_shipping1'] = 'Pick up the products yourself on appointment, no shipping rate';
+
+// database values for payments
+$txt['db_payment1'] = 'Pay via bank';
+$txt['db_payment2'] = 'Pay at store (only applicable when Picking up)';
+$txt['db_payment3'] = 'Pay via PayPal';
+$txt['db_payment4'] = 'Pay at receive';
+
+// order status
+$txt['db_status1'] = 'Order received from customer';
+$txt['db_status2'] = 'Waiting for payment';
+$txt['db_status3'] = 'Waiting for appointment';
+$txt['db_status4'] = 'Order being processed';
+$txt['db_status5'] = 'Sent to customer (completed)';
+$txt['db_status6'] = 'picked up by customer (completed)';
+$txt['db_status7'] = 'Cancelled';
+
+$txt['db_status10'] = 'Explanation of status';
+$txt['db_status11'] = 'Your order was received, but not yet confirmed by an employee';
+$txt['db_status12'] = 'Your order was confirmed. You need to transfer the order amount to our bank account';
+$txt['db_status13'] = 'Your payment was received. We have sent you an e-mail to notify you that your order is ready to be picked up. You need to call us to make an appointment';
+$txt['db_status14'] = 'Your paymant was received. The order is being processed. This either means we are about to recieve the product, or we are preparing to send it';
+$txt['db_status15'] = 'The order was sent using TPG Postal service. The order is completed';
+$txt['db_status16'] = 'The order was picked up by you. The order is completed';
+$txt['db_status17'] = 'The order was cancelled by either you or us';
+
+// database values for stock
+$txt['db_stock1'] = 'In stock';
+$txt['db_stock2'] = 'Out of stock';
+$txt['db_stock3'] = 'In backorder';
+
+$txt['db_stock10'] = 'Explanation of stock';
+$txt['db_stock11'] = 'The product is in stock. If you proces the order now, you will recieve the product(s) soon';
+$txt['db_stock12'] = 'The product is out of stock';
+$txt['db_stock13'] = 'The product is in backorder, so will be in stock shortly';
+
+// general values
+$txt['general1'] = 'Access denied!';
+$txt['general2'] = 'Your IP address had been logged to prevent further abuse';
+$txt['general3'] = 'new';
+$txt['general4'] = 'Back to admin options';
+$txt['general5'] = 'VAT';
+$txt['general6'] = 'excl.';
+$txt['general7'] = 'incl.';
+$txt['general8'] = 'NOTE: Dragonix is disabled! Customers can not browse or order products';
+$txt['general9'] = '404 error. Page not found!';
+$txt['general10'] = 'You have been banned from this site';
+$txt['general11'] = 'About us';
+$txt['general12'] = 'Error';
+$txt['general13'] = 'Notification';
+$txt['general14'] = 'Back';
+$txt['general15'] = 'Type this code';
+$txt['general16'] = 'The code was incorrect. Please try again';
+
+// header.php
+$txt['header1'] = 'Security risk';
+$txt['header2'] = 'Welcome';
+$txt['header3'] = 'guest';
+$txt['header4'] = '<font color=red><strong>install.php</strong></font> found. You need to delete/rename this file before you continue!';
+
+// menu.php
+$txt['menu1'] = 'Home';
+$txt['menu2'] = 'Shopping cart';
+$txt['menu3'] = 'Checkout';
+$txt['menu4'] = 'Search';
+$txt['menu5'] = 'General conditions';
+$txt['menu6'] = 'Shipping';
+$txt['menu7'] = 'Guarantee';
+$txt['menu8'] = 'Contact';
+$txt['menu9'] = 'Administration';
+$txt['menu10'] = 'Personal page';
+$txt['menu11'] = 'Logout';
+$txt['menu12'] = 'Login';
+$txt['menu13'] = 'Register';
+$txt['menu14'] = 'Information';
+$txt['menu15'] = 'Products';
+$txt['menu17'] = 'No products';
+$txt['menu18'] = 'About us';
+$txt['menu19'] = 'Extra';
+
+// sendprocedure.php
+$txt['send1'] = 'Shipping method';
+
+// cart.php
+$txt['cart1'] = 'Shopping cart';
+$txt['cart2'] = 'Your shopping cart is empty.';
+$txt['cart3'] = 'Description';
+$txt['cart4'] = 'Price';
+$txt['cart5'] = 'Quantity';
+$txt['cart6'] = 'Delete';
+$txt['cart7'] = 'Total';
+$txt['cart8'] = 'Empty';
+$txt['cart9'] = 'Checkout';
+$txt['cart10'] = 'Update';
+$txt['cart11'] = 'What is in your cart';
+$txt['cart12'] = 'Continue shopping';
+
+// browse.php
+$txt['browse1'] = 'Search results';
+$txt['browse2'] = 'Product description';
+$txt['browse3'] = 'Price';
+$txt['browse4'] = 'Sort';
+$txt['browse5'] = 'No products found';
+$txt['browse6'] = 'NOTE: No rights can be derived from the images. Prices are with reservation';
+$txt['browse7'] = 'edit';
+$txt['browse8'] = 'delete';
+$txt['browse9'] = 'Product list';
+$txt['browse10'] = 'change picture';
+$txt['browse11'] = 'Pages';
+$txt['browse12'] = 'Sold out';
+$txt['browse13'] = 'In stock';
+
+// submenu.php
+$txt['submenu1'] = 'The categories in this group';
+$txt['submenu2'] = 'No categories were found in this group';
+
+// main.php
+$txt['main1'] = 'Welcome';
+$txt['main2'] = 'Special offers';
+
+// details.php
+$txt['details1'] = 'Product details';
+$txt['details2'] = 'Product ID';
+$txt['details4'] = 'Description';
+$txt['details5'] = 'Price/piece';
+$txt['details6'] = 'Quantity';
+$txt['details7'] = 'Order';
+$txt['details8'] = 'Back to the list';
+$txt['details9'] = 'Click for full size';
+
+// conditions.php
+$txt['conditions1'] = 'I agree with the general terms';
+$txt['conditions2'] = 'I do not agree with the general terms';
+$txt['conditions3'] = 'Disabled';
+$txt['conditions4'] = 'Ordering is currently not available';
+$txt['conditions5'] = 'General terms';
+
+// shipping.php
+$txt['shipping1'] = 'Shipping and payment';
+$txt['shipping2'] = 'Select a shipping method';
+$txt['shipping3'] = 'Additional comments/questions';
+$txt['shipping4'] = 'Discount code';
+$txt['shipping5'] = 'If you have a discount code, you can type it here';
+$txt['shipping9'] = 'Next step';
+$txt['shipping10'] = 'Select a payment method';
+
+// checkout.php
+$txt['checkout1'] = 'Invalid discount code. If you feel this is an error, please contact us before proceeding with the checkout';
+$txt['checkout2'] = 'The page has expired. Go back to your shopping cart and click the checkout button';
+$txt['checkout3'] = "Dear sir/madam $lastname,<br /><br /><br />This message is to confirm your order with <strong>$shopname</strong><br /><br />Your order id: $webid<br />Your customer id: $customerid<br /><br />You ordered the following products:<br />";
+$txt['checkout4'] = ' x product ';
+$txt['checkout5'] = ' a piece';
+$txt['checkout6'] = "<br />";
+$txt['checkout7'] = 'You tried ordering:';
+$txt['checkout8'] = 'Currently in stock:';
+$txt['checkout9'] = "<br /><br />You can view the status of your order at any time, by clicking this link: <a href=\"$shopurl/index.php?page=orders&id=$customerid\">$shopurl/index.php?page=orders&id=$customerid</a><br /><br />Thank you for your order.<br />If you have questions then contact us (contact details are on our website)";
+$txt['checkout10'] = 'Confirmation of your order with '.$shopname;
+$txt['checkout11'] = 'Your order is completed. A confirmation e-mail is being send to you.';
+$txt['checkout12'] = 'The confirmation e-mail could not be send. Therefor print out the confirmation below.';
+$txt['checkout13'] = 'Below is your order confirmation. Print it!';
+$txt['checkout14'] = 'Discount';
+$txt['checkout15'] = 'There is not enough stock of the product you tried to order.';
+$txt['checkout16'] = "Shipping method";
+$txt['checkout17'] = "<strong>Shipping address:</strong><br />$company<br />$initials $middlename $lastname<br />$address<br />$zipcode  $city<br />$state<br />$country<br />$phone";
+$txt['checkout18'] = 'Discountcode';
+$txt['checkout19'] = "<strong>Payment method:</strong> ";
+$txt['checkout20'] = "<strong>Bank info:</strong><br />Account number: $bankaccount<br />Account owner: $bankaccountowner<br />City: $bankcity<br />Country: $bankcountry<br />Bank name: $bankname<br />IBAN: $bankiban<br />BIC: $bankbic<br />Subject/Reference: $webid";
+$txt['checkout21'] = "When the products are in stock, we will e-mail you for an appointment.";
+$txt['checkout22'] = "Use your PayPal account to transfer the money to us.";
+$txt['checkout23'] = "You have to pay the postal service when you recieve the package.";
+$txt['checkout24'] = "The total amount";
+$txt['checkout25'] = "including $show_vat ".$txt['general5'];
+$txt['checkout26'] = "Please transfer the entire invoice amount within $paymentdays days. When we recieve your payment, this order will processed further and will be shipped as soon as possible.";
+$txt['checkout27'] = "or download the order in PDF";
+
+// search.php
+$txt['search1'] = 'Find a product';
+$txt['search2'] = 'Search for';
+$txt['search3'] = 'Search method';
+$txt['search4'] = 'Match all words';
+$txt['search5'] = 'Match any word';
+$txt['search6'] = 'Search';
+
+// guarantee.php
+$txt['guarantee1'] = 'Guarantee';
+
+// contact.php
+$txt['contact1'] = 'Question via form '. $shopurl;
+$txt['contact2'] = 'Message send';
+$txt['contact3'] = 'Your message is send. If needed we will reply your message as soon as possible';
+$txt['contact5'] = 'You need to fill in all the fields of the form.<br /><a href="javascript:history.go(-1)"><strong>Click here</strong></a> to go back.';
+$txt['contact6'] = 'Contact';
+$txt['contact7'] = 'How to get into contact with';
+$txt['contact8'] = 'E-mail';
+$txt['contact9'] = 'Telephone';
+$txt['contact10'] = 'Fax';
+$txt['contact11'] = 'To contact us via the website, use the form below:';
+$txt['contact12'] = 'Send to';
+$txt['contact13'] = 'Your name';
+$txt['contact14'] = 'Your e-mail address';
+$txt['contact15'] = 'Your message';
+
+// checklogin.php
+$txt['checklogin1'] = 'Use your personal code to login';
+$txt['checklogin2'] = 'Login name';
+$txt['checklogin3'] = 'Password';
+$txt['checklogin4'] = 'Login';
+$txt['checklogin5'] = 'If you do not have a customer ID yet, click here';
+$txt['checklogin6'] = 'Why become a member?';
+$txt['checklogin7'] = 'In order to purchase products from our site you need to become a member. During registration we need your name, a shipping address , e-mail address, etc. We need this information to correctly handle your purchase.<br /><br /><strong>Your data will only be used by us.</strong><br /><br /><br />After you become a member you additionally can:<ul><li>Logon to the Dragonix from any PC<li>Order products<li>Monitor the status of ordered products<li>Manage your shopping cart</ul>';
+$txt['checklogin8'] = 'Forgotten login data';
+$txt['checklogin9'] = 'Fill in the email address which you used in your account. Your login data will be sent to that address.';
+$txt['checklogin10'] = 'Send mail';
+$txt['checklogin11'] = 'Lost your login data?';
+$txt['checklogin12'] = 'Your login data is sent to';
+$txt['checklogin13'] = 'Lost login data '. $shopurl;
+$txt['checklogin14'] = "This email was sent to you, because you requested your login data on our site (<a href=\"$shopurl\">$shopurl</a>)";
+$txt['checklogin15'] = 'There is no customer with the email address you supplied';
+$txt['checklogin18'] = 'Go back';
+
+// login.php
+$txt['login1'] = 'Error logging in.. please wait';
+$txt['login2'] = 'or click here';
+$txt['login3'] = 'You are logged in.. please wait';
+
+// logout.php
+$txt['logout1'] = 'You have been logged off..';
+
+// my.php
+$txt['my3'] = 'About your personal page';
+$txt['my4'] = 'This is your personal page. Only you have access to this page if your are properly logged in on the site with your loginname and password.<br /><br />In this screen you can view your personal data, orders and shopping cart. All accessable from 1 screen.';
+$txt['my5'] = 'Personal page options';
+$txt['my6'] = 'Your customer-ID';
+$txt['my7'] = 'Change data';
+$txt['my8'] = 'Show orders';
+$txt['my9'] = 'Show cart';
+
+// admin.php
+$txt['admin1'] = 'Shop Administration';
+$txt['admin2'] = 'Orders';
+$txt['admin3'] = 'Customers';
+$txt['admin4'] = 'Store';
+$txt['admin5'] = 'Products';
+$txt['admin6'] = 'Groups&<br />Categories';
+$txt['admin7'] = 'Optimize database';
+$txt['admin8'] = 'Settings';
+$txt['admin9'] = 'Upload pricelist';
+$txt['admin10'] = 'Optimizing all database tables..';
+$txt['admin11'] = 'Optimzing';
+$txt['admin12'] = 'Optimization completed!';
+$txt['admin13'] = 'Info and support';
+$txt['admin14'] = 'Check for updates';
+$txt['admin15'] = 'General conditions';
+$txt['admin16'] = 'Shipping page';
+$txt['admin17'] = 'Guarantee page';
+$txt['admin18'] = 'Shipping options';
+$txt['admin19'] = 'Ban list';
+$txt['admin20'] = 'About us';
+$txt['admin21'] = 'Payment options';
+$txt['admin22'] = 'Front page';
+$txt['admin23'] = 'Change settings';
+$txt['admin24'] = 'Edit files';
+$txt['admin25'] = 'Information';
+$txt['admin26'] = 'Error log';
+$txt['admin27'] = 'Backup Database';
+$txt['admin28'] = 'Backup complete. To download the backup, click on the link below';
+$txt['admin29'] = 'Admins';
+$txt['admin30'] = 'Extra pages';
+$txt['admin31'] = 'Access log';
+$txt['admin32'] = 'Stock management';
+$txt['admin33'] = 'A number of products (';
+$txt['admin34'] = ') are below the minimum stock level!';
+$txt['admin35'] = 'Mailing list';
+$txt['admin36'] = '<strong><font color="red">There is news from danmat.us</font></strong><br /><br />It might be a security fix, new version or other important news. Check it out below or visit <a href="http://www.danmat.us">danmat.us.org</a>!<br /><br />(you only get this notification once when there is new news)';
+$txt['admin37'] = 'Shipping countries';
+$txt['admin38'] = 'Discount';
+
+
+// customeradmin.php
+$txt['customeradmin1'] = 'Lastname';
+$txt['customeradmin2'] = 'Join date';
+$txt['customeradmin3'] = 'E-mail';
+$txt['customeradmin4'] = 'Telephone';
+$txt['customeradmin5'] = 'Options';
+$txt['customeradmin6'] = 'Member administration';
+$txt['customeradmin7'] = 'This person is now member of the group Administrators';
+$txt['customeradmin8'] = 'This person is now member of the group Customers';
+$txt['customeradmin9'] = 'No customers found';
+$txt['customeradmin10'] = 'Search';
+
+// orderadmin.php
+$txt['orderadmin1'] = 'The status of your order ';
+$txt['orderadmin2'] = ' has changed';
+$txt['orderadmin3'] = 'The order is removed';
+$txt['orderadmin4'] = "<br /><br /><a href=\"$shopurl/index.php?page=orders&id=";
+$txt['orderadmin5'] = '">Click here</a> for the current order status';
+$txt['orderadmin6'] = 'E-mail send to';
+$txt['orderadmin7'] = 'e-mail customer?';
+$txt['orderadmin8'] = 'Update';
+$txt['orderadmin9'] = 'all orders';
+$txt['orderadmin10'] = 'There are no orders with the status you specified';
+$txt['orderadmin11'] = 'Show';
+$txt['orderadmin12'] = 'NOTE: The customer added extra notes!';
+$txt['orderadmin13'] = 'Order administration';
+$txt['orderadmin14'] = 'Change status';
+$txt['orderadmin15'] = 'Order status is changed';
+
+// orders.php
+$txt['orders3'] = 'Your placed orders <a href=# class=info>(?)<span>Below is a list of your orders and their current status<br />Click on an order ID to view the details</span></a>';
+$txt['orders4'] = 'Order ID';
+$txt['orders5'] = 'Shipping&Payment';
+$txt['orders6'] = 'Invoice Amount';
+$txt['orders7'] = 'Order date';
+$txt['orders8'] = 'Status';
+$txt['orders9'] = 'You have not yet placed any orders via our store';
+
+// customer.php
+$txt['customer1'] = 'State';
+$txt['customer2'] = 'Customer removed';
+$txt['customer3'] = 'Go back';
+$txt['customer5'] = 'You must resolve the errors in order to continue';
+$txt['customer6'] = 'All fields marked with a (*) must be filled';
+$txt['customer7'] = 'You can only use letters and/or numbers in a username';
+$txt['customer8'] = 'The two passwords do not match';
+$txt['customer9'] = 'You password should be at least 5 characters long';
+$txt['customer10'] = 'You entered an invalid e-mail address';
+$txt['customer11'] = "Welcome to $shopname";
+$txt['customer12'] = "Dear Sir, Madam $tussenvoegsels $naam,<br /><br />Thank you for joining the $shopname  (<a href=\"$shopurl\">$shopurl</a>).<br /><br />You can now logon to our site and order products<br />or view the status of your placed orders.<br /><br />Here is your login data:<br />Login name:  $login<br />Password: $pass1<br /><br />Keep this data safe!<br /><br />See you soon at <a href=\"$shopurl\">$shopurl</a><br /><br />Kind regards,<br /><br /><br />The webmaster";
+$txt['customer13'] = 'Your information was succesfully stored.';
+$txt['customer14'] = 'Please provide as much information as possible';
+$txt['customer15'] = 'Login name';
+$txt['customer16'] = 'Password';
+$txt['customer17'] = 'Password again';
+$txt['customer18'] = 'Surname';
+$txt['customer19'] = 'Prefix';
+$txt['customer20'] = 'Initials';
+$txt['customer21'] = 'Address';
+$txt['customer22'] = 'Zip';
+$txt['customer23'] = 'City';
+$txt['customer24'] = 'Country';
+$txt['customer25'] = 'Telephone';
+$txt['customer26'] = 'E-mail';
+$txt['customer27'] = '* = must be filled in';
+$txt['customer28'] = 'Save data';
+$txt['customer29'] = 'The username you choose is already in use by another user';
+$txt['customer30'] = 'Company';
+$txt['customer32'] = 'You tried to delete the administrator account. This would prevent you from logging into the site. Your request has been refused.';
+$txt['customer33'] = '(between 5 and 10 characters)';
+$txt['customer34'] = 'The email adres you choose is already in use by another user';
+$txt['customer35'] = 'Click here to login';
+$txt['customer36'] = 'New customer';
+$txt['customer37'] = 'A customer has registered itself to your store. A copy of the mail that was send to them can be found below:';
+$txt['customer38'] = 'Newsletter?';
+
+// readorder.php
+$txt['readorder1'] = 'Print this order';
+$txt['readorder2'] = 'Go back to your orders';
+
+// editsettings.php
+$txt['editsettings1'] = 'Change settings';
+$txt['editsettings2'] = 'Save settings';
+$txt['editsettings3'] = 'Hide out of stock products';
+$txt['editsettings4'] = 'Standard shipping country <a href=# class=info>(?)<span>This is usually the country in which your company resides</span></a>';
+$txt['editsettings5'] = 'Show stock amount';
+$txt['editsettings7'] = 'Additional shipping rate pay on recieve <a href=# class=info>(?)<span>In addition to the normal shipping rate, this form of shipping costs extra. Format: 12.34</span></a>';
+$txt['editsettings8'] = 'Currency';
+$txt['editsettings9'] = 'Currency symbol <a href=# class=info>(?)<span>In your case probably: $</span></a>';
+$txt['editsettings10'] = 'Pay within xx days <a href=# class=info>(?)<span>Within how many days should the order amount be on your account?</span></a>';
+$txt['editsettings11'] = 'Including VAT <a href=# class=info>(?)<span>If the VAT is 19% this number should read: 1.19</span></a>';
+$txt['editsettings12'] = 'VAT text <a href=# class=info>(?)<span>In case of 19% VAT this should read: 19%</span></a>';
+$txt['editsettings13'] = 'Prices in DB are incl. VAT';
+$txt['editsettings14'] = 'Email address sales department <a href=# class=info>(?)<span>On this address you will recieve the orders, for example: sales@yourdomain.com</span></a>';
+$txt['editsettings15'] = 'Store name';
+$txt['editsettings16'] = 'Store URL <a href=# class=info>(?)<span>URL starting with http://, but without trailing /, for example: http://www.yourdomain.com/shop</span></a>';
+$txt['editsettings17'] = 'Standard language';
+$txt['editsettings18'] = 'Order prefix (optional) <a href=# class=info>(?)<span>Every order id starts with the prefix, for example: WEB-</span></a>';
+$txt['editsettings19'] = 'Order suffix (optional) <a href=# class=info>(?)<span>Every order id ends with the suffix, for example the current year: -06</span></a>';
+$txt['editsettings20'] = 'Use stock amounts <a href=# class=info>(?)<span><strong>enabled:</strong> you use stock amounts<br /><br /><strong>disabled:</strong> you use stock status (in stock/in backorder/out of stock)</span></a>';
+$txt['editsettings21'] = 'Enable Order-module';
+$txt['editsettings22'] = 'Disable Dragonix';
+$txt['editsettings23'] = 'Disable site title';
+$txt['editsettings24'] = 'Disable site message';
+$txt['editsettings25'] = 'Email address webmaster';
+$txt['editsettings26'] = 'Telephone number (optional)';
+$txt['editsettings27'] = 'Fax number (optional)';
+$txt['editsettings28'] = 'Bank account';
+$txt['editsettings29'] = 'Bank account owner';
+$txt['editsettings30'] = 'Bank city';
+$txt['editsettings31'] = 'Bank country';
+$txt['editsettings32'] = 'Bank IBAN';
+$txt['editsettings33'] = 'Bank BIC';
+$txt['editsettings34'] = 'Starting year <a href=# class=info>(?)<span>The year you started your company</span></a>';
+$txt['editsettings35'] = 'Logo <a href=# class=info>(?)<span>The picture holding your logo. This should be in the folder <strong>'.$gfx_dir.'</strong></span></a>';
+$txt['editsettings37'] = 'Company slogan (optional) <a href=# class=info>(?)<span>The slogan is printed below the logo</span></a>';
+$txt['editsettings38'] = 'Page title <a href=# class=info>(?)<span>The title displayed on the browser window in which your site is displayed</span></a>';
+$txt['editsettings39'] = 'Footer';
+$txt['editsettings44'] = 'The settings are saved to the database';
+$txt['editsettings45'] = 'Bank details';
+$txt['editsettings46'] = 'Layout';
+$txt['editsettings47'] = 'Store';
+$txt['editsettings48'] = 'Finance';
+$txt['editsettings49'] = 'Number format';
+$txt['editsettings50'] = 'Maximum description lenght <a href=# class=info>(?)<span>This is to shorten the descriptions in the price lists. <br /><strong>0 = do not shorten<br />1-99 = wordwrap on xx characters</strong></span></a>';
+$txt['editsettings51'] = 'No VAT <a href=# class=info>(?)<span>Enable this if you do not want to use VAT in your shop prices, for example when it is a siet with personal products</span></a>';
+$txt['editsettings52'] = 'Name of bank';
+$txt['editsettings53'] = 'Pricelist format <a href=# class=info>(?)<span>This settings applies to the pricelists, shoppingcart and order confirmation email</span></a>';
+$txt['editsettings54'] = 'Product ID';
+$txt['editsettings55'] = 'Description';
+$txt['editsettings56'] = 'Product ID and description';
+$txt['editsettings57'] = 'Date format <a href=# class=info>(?)<span><strong>d-m-Y @ G:i</strong> for dd-mm-jjjj @ 23:59<br /><strong>m-d-Y @ G:i</strong> for mm-dd-jjjj @ 23:59<br /></span></a>';
+$txt['editsettings58'] = 'Search gfx in pricelist <a href=# class=info>(?)<span>Search for pictures of the various products during loading of the pricelists. If a picture is found, an icon will appear behind the product, so the visitor knows there is a picture. <br /><br />To descrease loading times, or if you have the pictures on a remote host, you-d better disable this option</span></a>';
+$txt['editsettings59'] = 'Use pictures <a href=# class=info>(?)<span>If you do not have pictures for your products, you-d better turn this option off</span></a>';
+$txt['editsettings69'] = 'Use thumbnails in pricelist <a href=# class=info>(?)<span>Shows (if found) a small preview of the product picture in front of the description</span></a>';
+$txt['editsettings70'] = 'Keywords (comma seperated) <a href=# class=info>(?)<span>Words on which you want to be found by search engines</span></a>';
+$txt['editsettings71'] = 'Used charset <a href=# class=info>(?)<span>Some languages need different character sets. For you it is probably ISO-8859-1</span></a>';
+$txt['editsettings72'] = 'Show General conditions link';
+$txt['editsettings73'] = 'Show Guarantee link';
+$txt['editsettings74'] = 'Show Shipping link';
+$txt['editsettings75'] = 'Pictures filename <a href=# class=info>(?)<span>Some languages have characters that are not allowed in filenames. It is best to use the database id as the picture ID in those (and most other) cases</span></a>';
+$txt['editsettings76'] = 'Database ID (recommended)';
+$txt['editsettings77'] = 'Product ID';
+$txt['editsettings78'] = 'Show About Us link';
+$txt['editsettings79'] = 'Enable Live News <a href=# class=info>(?)<span>This enabled the live news feed from danmat.us, which informs you of updates and other related news. Only disable this if you are having difficulties with this option</span></a>';
+$txt['editsettings80'] = 'Pricelist thumb width <a href=# class=info>(?)<span>Width in pixels.<br />default=50<br/>0=disable resize</span></a>';
+$txt['editsettings81'] = 'Pricelist thumb height <a href=# class=info>(?)<span>Height in pixels.<br />default=50<br />0=disable resize</span></a>';
+$txt['editsettings82'] = 'Category thumb width <a href=# class=info>(?)<span>Width in pixels.<br />default=50<br />0=disable resize</span></a>';
+$txt['editsettings83'] = 'Category thumb height <a href=# class=info>(?)<span>Height in pixels.<br />default=50<br />0=disable resize</span></a>';
+$txt['editsettings84'] = 'Product pic. max. width <a href=# class=info>(?)<span>Maximum width in pixels.<br />default=450<br />9999=disable max</span></a>';
+$txt['editsettings85'] = 'Product pic. max. height <a href=# class=info>(?)<span>Maximum height in pixels.<br />default=350<br />9999=disable max</span></a>';
+$txt['editsettings86'] = 'All';
+$txt['editsettings87'] = 'Show New products link';
+$txt['editsettings88'] = 'Use WYSIWYG editor';
+$txt['editsettings89'] = 'Auto create thumbnails <a href=# class=info>(?)<span>Auto creates a thumbnail when uploading a product picture.<br />Requires <strong>GD extension</strong> to work</span></a>';
+$txt['editsettings90'] = 'Shop description <a href=# class=info>(?)<span>The description used by search engines to index your shop</span></a>';
+$txt['editsettings91'] = 'Products per page <a href=# class=info>(?)<span>The number of products per page.<br />0 = no limit</span></a>';
+$txt['editsettings92'] = 'Disabled';
+$txt['editsettings93'] = 'Advanced';
+$txt['editsettings94'] = 'Simple';
+$txt['editsettings95'] = 'Use Captcha <a href=# class=info>(?)<span>Use Captcha (anti-spambot) with contact form and customer registration</span></a>';
+$txt['editsettings96'] = 'Use image popup <a href=# class=info>(?)<span>Use the better looking image popup<br />Javascript required</span></a>';
+$txt['editsettings97'] = 'Position currency symbol';
+$txt['editsettings98'] = 'Use this template';
+$txt['editsettings99'] = 'Use stock level warning';
+$txt['editsettings100'] = 'Minimum stock level';
+$txt['editsettings101'] = 'Weight class <a href=# class=info>(?)<span>For you probably <strong>LB</strong></span></a>';
+$txt['editsettings102'] = 'Order from pricelist';
+$txt['editsettings103'] = 'Use datefix <a href=# class=info>(?)<span>Only use this if your errorlog is filling up with date warnings</span></a>';
+$txt['editsettings104'] = 'Pricelist sorting';
+$txt['editsettings105'] = 'Description';
+$txt['editsettings106'] = 'Price';
+$txt['editsettings107'] = 'Activate Autosubmit <a href=# class=info>(?)<span>If turned on AND the payment method supports it, the customer will be automaticly be redirected to the payment portal of the select payment method</span></a>';
+$txt['editsettings108'] = 'Create PDF\'s <a href=# class=info>(?)<span>If enabled, when a customer places an order, the order confirmation will be converted to PDF and emailed as attachment</span></a>';
+$txt['editsettings109'] = 'Use PHP Mail() <a href=# class=info>(?)<span>Use PHP Mail() to send mails</span></a>';
+
+// productadmin.php
+$txt['productadmin1'] = ' has been uploaded to ';
+$txt['productadmin2'] = 'There was an error uploading the file, please try again!';
+$txt['productadmin3'] = 'Please only upload .jpg, .png or .gif files';
+$txt['productadmin4'] = 'Add another product';
+$txt['productadmin5'] = 'Back to productlist';
+$txt['productadmin6'] = 'Add a product';
+$txt['productadmin7'] = 'Update a product';
+$txt['productadmin8'] = 'Add some groups first';
+$txt['productadmin9'] = 'ID';
+$txt['productadmin10'] = 'Description <a href=# class=info>(?)<span>HTML code is allowed</span></a>';
+$txt['productadmin11'] = 'Price <a href=# class=info>(?)<span>format: 123456.78</span></a>';
+$txt['productadmin12'] = 'Stock amount';
+$txt['productadmin13'] = 'Stock (0|1|2) <a href=# class=info>(?)<span>0=Out of stock<br />1=In stock<br />2=In backorder</span></a>';
+$txt['productadmin14'] = 'On frontpage';
+$txt['productadmin15'] = 'New';
+$txt['productadmin16'] = 'Add product';
+$txt['productadmin17'] = 'Update product';
+$txt['productadmin18'] = 'Group/Categorie';
+$txt['productadmin19'] = 'Select a jpg, png or gif file';
+$txt['productadmin20'] = 'Upload';
+$txt['productadmin21'] = 'Upload a picture';
+$txt['productadmin22'] = 'Add some categories first';
+$txt['productadmin23'] = 'You can not upload a picture, because your product has no ID';
+$txt['productadmin24'] = 'Delete this picture';
+$txt['productadmin25'] = 'Picture succesfully removed';
+$txt['productadmin26'] = 'Product was succesfully removed';
+$txt['productadmin27'] = 'Extra options';
+$txt['productadmin28'] = 'Make thumbnail for all pictures (could take a while)';
+$txt['productadmin29'] = 'All thumbnails are created (where needed)..';
+$txt['productadmin30'] = 'Features <a href=# class=info>(?)<span>Feature1:Red,White,Blue|Feature2:Small,Medium,Large<br />No spaces!</span></a>';
+$txt['productadmin31'] = 'Weight <a href=# class=info>(?)<span>The weight is used is the shipping rate is calculated using the total weight of the order</span></a>';
+
+
+// groupadmin.php
+$txt['groupadmin1'] = ' has been uploaded to ';
+$txt['groupadmin2'] = 'There was an error uploading the file, please try again!';
+$txt['groupadmin3'] = 'Please only upload .jpg, png or .gif files';
+$txt['groupadmin4'] = 'Group added..';
+$txt['groupadmin5'] = 'Group updated..';
+$txt['groupadmin6'] = 'Group (and underlaying categories and products) deleted..';
+$txt['groupadmin7'] = 'Category added..';
+$txt['groupadmin8'] = 'Category updated..';
+$txt['groupadmin9'] = 'Category moved..';
+$txt['groupadmin10'] = 'Category (and underlaying products) deleted..';
+$txt['groupadmin11'] = 'Group name';
+$txt['groupadmin12'] = 'Add group';
+$txt['groupadmin13'] = 'There are no groups yet';
+$txt['groupadmin14'] = 'Group';
+$txt['groupadmin15'] = 'New group name';
+$txt['groupadmin16'] = 'Update group';
+$txt['groupadmin17'] = 'Delete group';
+$txt['groupadmin18'] = 'Group options';
+$txt['groupadmin19'] = 'Category options';
+$txt['groupadmin20'] = 'Category name';
+$txt['groupadmin21'] = 'Add category';
+$txt['groupadmin22'] = 'Category';
+$txt['groupadmin23'] = 'New category name';
+$txt['groupadmin24'] = 'Update category';
+$txt['groupadmin25'] = 'Move category';
+$txt['groupadmin26'] = 'Delete category';
+$txt['groupadmin27'] = 'Select a jpg, png or gif file';
+$txt['groupadmin28'] = 'Upload';
+$txt['groupadmin29'] = 'Upload a picture';
+$txt['groupadmin30'] = 'General options';
+$txt['groupadmin31'] = 'Delete empty categories and groups';
+$txt['groupadmin32'] = 'number of categories deleted';
+$txt['groupadmin33'] = 'number of groups deleted';
+$txt['groupadmin34'] = 'A group with the name '.$gname.' already exists. Please choose a different name';
+$txt['groupadmin35'] = 'The group name is empty';
+$txt['groupadmin36'] = 'You have not entered a new group Name';
+$txt['groupadmin37'] = 'A category with the name '.$cname.' already exists. Please choose a different name';
+$txt['groupadmin38'] = 'You have not entered a new category name';
+$txt['groupadmin39'] = 'The category name is empty';
+
+// uploadadmin.php
+$txt['uploadadmin1'] = ' has been uploaded to ';
+$txt['uploadadmin2'] = 'There was an error uploading the file, please try again!';
+$txt['uploadadmin3'] = 'Please only upload .sql files';
+$txt['uploadadmin4'] = 'Import SQL (update, pricelist, etc)';
+$txt['uploadadmin5'] = 'Select an SQL file';
+$txt['uploadadmin6'] = 'Import SQL';
+$txt['uploadadmin7'] = 'SQL file inserted into database';
+
+// adminedit.php
+$txt['adminedit1'] = 'Save changes';
+$txt['adminedit2'] = 'Changes are saved...';
+$txt['adminedit3'] = 'Currently editting ';
+
+// shippingadmin.php
+$txt['shippingadmin1'] = 'Shipping method added';
+$txt['shippingadmin2'] = 'Shipping method removed';
+$txt['shippingadmin3'] = 'Shipping method edited';
+$txt['shippingadmin4'] = 'Supported shipping methods';
+$txt['shippingadmin5'] = 'Description';
+$txt['shippingadmin6'] = 'Costs';
+$txt['shippingadmin7'] = "Only in $send_default_country?";
+$txt['shippingadmin8'] = 'Edit';
+$txt['shippingadmin9'] = 'Remove';
+$txt['shippingadmin10'] = 'Add';
+$txt['shippingadmin11'] = 'Edit shipping countries';
+$txt['shippingadmin12'] = 'Options';
+$txt['shippingadmin13'] = 'Payment options';
+$txt['shippingadmin14'] = 'Edit shipping method';
+$txt['shippingadmin15'] = 'NOTE: Your about to change a system-shipping method. This method triggers certain other parts of this site. Just change the description to your liking, but not the essence of the method';
+$txt['shippingadmin16'] = 'Edit default shipping country';
+$txt['shippingadmin17'] = 'Other options';
+$txt['shippingadmin18'] = 'From';
+$txt['shippingadmin19'] = 'To';
+$txt['shippingadmin20'] = 'Costs';
+$txt['shippingadmin21'] = 'Shipping costs/weight rule successfully removed';
+$txt['shippingadmin22'] = 'No shipping (pickup)';
+$txt['shippingadmin23'] = 'Save';
+
+// paymentadmin.php
+$txt['paymentadmin1'] = 'Payment method added';
+$txt['paymentadmin2'] = 'Payment method removed';
+$txt['paymentadmin3'] = 'Payment method edited';
+$txt['paymentadmin4'] = 'Supported payment methods';
+$txt['paymentadmin5'] = 'Description';
+$txt['paymentadmin6'] = 'Change payment method';
+$txt['paymentadmin7'] = 'Payment HTML code';
+$txt['paymentadmin8'] = 'Edit';
+$txt['paymentadmin9'] = 'Remove';
+$txt['paymentadmin10'] = 'Add';
+$txt['paymentadmin11'] = 'Options';
+$txt['paymentadmin12'] = 'NOTE: Your about to change a system-payment method. This method triggers certain other parts of this site. Just change the description to your liking, but not the essence of the method';
+
+// errorlogadmin.php
+$txt['errorlogadmin1'] = 'Error log';
+$txt['errorlogadmin2'] = 'Severity';
+$txt['errorlogadmin3'] = 'Error';
+$txt['errorlogadmin4'] = 'File';
+$txt['errorlogadmin5'] = 'Line';
+$txt['errorlogadmin6'] = 'Date';
+$txt['errorlogadmin7'] = 'No logged errors found';
+$txt['errorlogadmin8'] = 'Clear log';
+$txt['errorlogadmin9'] = 'The error log was cleared succesfully';
+
+// pagesadmin.php
+$txt['pagesadmin1'] = 'Extra pages';
+$txt['pagesadmin2'] = 'Page name';
+$txt['pagesadmin3'] = 'Options';
+$txt['pagesadmin4'] = 'Rename';
+$txt['pagesadmin5'] = 'Add normal page';
+$txt['pagesadmin6'] = 'Page renamed';
+$txt['pagesadmin7'] = 'Page deleted';
+$txt['pagesadmin8'] = 'Failed';
+$txt['pagesadmin9'] = 'Page added';
+$txt['pagesadmin10'] = 'Add private page';
+$txt['pagesadmin11'] = 'Hidden';
+
+// accessadmin.php
+$txt['accesslogadmin1'] = 'Access log';
+$txt['accesslogadmin2'] = 'Login';
+$txt['accesslogadmin3'] = 'Password';
+$txt['accesslogadmin4'] = 'Time';
+$txt['accesslogadmin5'] = 'Success';
+//$txt['accesslogadmin6'] = 'Date';
+$txt['accesslogadmin7'] = 'No access log data found';
+$txt['accesslogadmin8'] = 'Clear log';
+$txt['accesslogadmin9'] = 'The access log was cleared succesfully';
+
+// stockadmin.php
+$txt['stockadmin2'] = 'Show';
+$txt['stockadmin3'] = 'Stock management';
+
+// mailinglist.php
+$txt['mailinglist1'] = 'Copy/paste this to your favourite Mass mailer software';
+
+// discountadmin.php
+$txt['discountadmin2'] = 'Number of codes';
+$txt['discountadmin3'] = 'Discount amount';
+$txt['discountadmin4'] = 'Percentage? <a href=# class=info>(?)<span>If you want to give for example 25% discount fill in 25 in the Amount field and check this box. If you want to give a fixed discount, do not check this box</span></a>';
+$txt['discountadmin5'] = 'Make codes';
+$txt['discountadmin6'] = 'All unused codes';
+$txt['discountadmin7'] = 'Discount code';
+$txt['discountadmin8'] = 'No unused codes';
+$txt['discountadmin9'] = 'Created on';
+?>

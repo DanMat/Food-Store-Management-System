@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /orders/ # orders
+Disallow: /templates/ # page images
+Disallow: /prodgfx/ # product images
+Disallow: /langs/ # language files
+Disallow: /includes/ # include files
+Disallow: /addons/ # addon files

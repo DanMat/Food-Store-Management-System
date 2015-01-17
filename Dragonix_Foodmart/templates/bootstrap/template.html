@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=<?php echo $charset ?>" />
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="-1">
+	<meta name="description" content="<?php echo $description ?>" />
+	<meta name="keywords" content="<?php echo $keywords ?>" />
+	<meta name="author" content="Dragonix" />
+	<title><?php echo $page_title ?></title>
+	<link rel="stylesheet" type="text/css" href="<?php echo $template_dir."/".$template."/"; ?>stylesheet.css" />
+	<link rel="stylesheet" href="addons/lightbox/lightbox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="addons/lightbox/lightbox.js"></script>
+
+</head>
+<body <?php if ($autosubmit == 1 && $page == "checkout") { echo "onload=\"document.autosubmit.submit()\""; } ?>>
+     <div id="wrapper">
+
+		<div id="header">
+			<div class="headerLogo">
+				<?php include("header.php"); ?>
+				<?php include("slogan.php"); ?>
+			</div>
+			<div class="navbar">
+				<?php include("topmenu.php"); ?>
+			</div>
+		</div>
+		<div id="contentBody">
+			<span class="sidePanel">
+				<div class="navcontainerL">
+					<?php 
+						include("menu_products.php"); 
+					?>
+					<br /><br />
+					<?php 
+						if (IsAdmin() == false) {include("menu_cart.php");} 
+					?>
+				</div>
+			</span>
+			<span class="mainPanel">
+				<?php include("loadmain.php"); ?>
+			</span>
+			<span class="sidePanel">
+				<div class="navcontainerR"><?php include("menu_general.php"); ?></div>
+			</span>
+		</div>
+		<div id="footer">
+			<td colspan="3" width="100%" align="center" valign="center"><?php include("footer.php"); ?></td>
+		</div>
+						    
+    </div>
+</body>
+</html>

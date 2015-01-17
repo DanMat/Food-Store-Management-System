@@ -1,0 +1,28 @@
+.cusRow {
+	display: table-row;
+}
+
+.cusTitle {
+	display: table-cell;
+	padding-right: 10px;
+}
+
+.cusVal, .cusVal1 {
+	display: table-cell;
+}
+
+.hidden {
+	display: none;
+}
+
+.orderWrap {
+	margin: 20px;
+	border: 2px solid white;
+	padding: 10px;
+}
+
+.htFix {
+	position: absolute;
+	width: 98%;
+	height: 82%;
+}

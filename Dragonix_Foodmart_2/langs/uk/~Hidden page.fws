@@ -1,0 +1,1 @@
+<h2>This is a hidden extra page. </h2><p>The name of a hidden page always starts with ~. These pages will not be visible in the Extra Pages menu, and can be used for as RETURN URL for a payment method.<br /><br />This is how you link to them:<br />www.SHOPURL.com/index.php?page=info&action=~PAGE-TITLE

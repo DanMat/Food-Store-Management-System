@@ -1,0 +1,1218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 TRANSITIONAL//EN">
+<html>
+
+	<head>
+		<title>Email Documentation</title>
+		
+		<style type="text/css" media="all">
+		
+		* {
+		  border: 0;
+		  margin: 0;
+		  padding: 0;
+		  
+		  font-family: "Lucida Grande", "Trebuchet MS", Verdana, Arial, Sans;
+		  line-height: 1.3em;
+		}
+		
+		h1, h2, h3, h4, h5, p, ul {
+      padding-bottom: 0.15em;
+		  margin-bottom: 0.5em;
+		  text-align: justify;
+		}
+		
+		h1, h2, h3, h4 {
+		  border-bottom: 0.15em solid black;
+		}
+		
+		h2, h3, h4 {
+		  padding-top: 0.5em;
+		}
+		
+		h3 {
+		  border-color: gray;
+		}
+		
+		h4 {
+		  border-color: silver;
+		}
+		
+		h5 {
+			font-size: 1em;
+		}
+		
+		  h4.desc, h5.desc {
+		    border: none;
+		    margin: 1.2em 0 0.35em 0;
+		    font-style: italic;
+		    padding-top: 0;
+		  }
+		  
+		    h4.desc span, h5.desc span {
+		      font-style: normal;
+		      font-weight: normal;
+		    }
+		
+		body {
+		  padding: 1em;
+		}
+		
+		p {
+      margin-bottom: 1.2em;
+      font-size: 95%;
+		}
+		
+		  p.desc {
+		    margin-left: 3em;
+		    margin-bottom: 0.9em;
+		  }
+		
+		.example {
+		  font-weight: bold;
+		}
+		
+		.comment {
+			color: gray;
+			font-weight: normal;
+			padding-left: 0.5em;
+		}
+		
+		.vars {
+			font-weight: normal;
+		}
+		
+		ul, ol {
+		  padding-left: 2em;
+		}
+		
+		acronym {
+		  border-bottom: 1px dotted gray;
+		}
+		
+		pre, code {
+		  font-family: "Courier New", Courier, Monospace;
+		  font-size: 90%;
+		  
+		  margin: 0 3em 2em 3em;
+		  padding: 1em;
+		  overflow: auto;
+		  display: block;
+		  
+		  border: 2px solid gray;
+		  background-color: whitesmoke;
+		}
+		
+		code {
+			font-size: 100%;
+		}
+		
+		code * {
+		  font-family: "Courier New", Courier, Monospace;
+		  font-size: 100%;
+		}
+		
+		.bool {
+		  font-family: "Courier New", Courier, Monospace;
+		  font-size: 110%;
+		  font-weight: bold;
+		}
+		
+		.code, .code span {
+		  font-family: "Courier New", Courier, Monospace;
+		  font-size: 100%;
+		  
+		  color: #0000bb;
+		}
+		
+		  .code .comment {
+		    color: #ff8000;
+		  }
+		  
+		  .code .enc {
+		    color: #007700;
+		  }
+		  
+		  .code .string {
+		    color: #dd0000;
+		  }
+		
+		#navigation {
+		  width: 23%;
+		  position: fixed;
+		  top: 5em;
+		  right: 1em;
+		  
+		  height: 75%;
+		  overflow: auto;
+		  
+      color: gray;
+		  background-color: whitesmoke;
+		  border: 1px solid silver;
+		}
+		  
+		  #navigation a {
+		    color: gray;
+		    text-decoration: none;
+		  }
+		  
+		    #navigation a:hover, #navigation a:active {
+		      color: black;
+		    }
+		    
+		    #navigation li a:hover, #navigation li a:active {
+		      text-decoration: underline;
+		    }
+		
+		  #navigation h2, #navigation h3, #navigation p, #navigation ul {
+		    font-size: 1em;
+		    text-align: left;
+		    
+		    margin: 0.65em;
+		  }
+		  
+		  #navigation h2, #navigation h3 {
+		    padding-top: 0;
+		    border-bottom: 0.15em solid gray;
+		  }
+		  
+		  #navigation h3, #navigation p, #navigation ul {
+		    font-size: 80%;
+		  }
+		  
+		  #navigation h2.top {
+		  	font-size: 0.6em;
+		  	border: none;
+		  	margin-bottom: -2.5em;
+		  	text-align: right;
+		  	padding-right: 0.7em;
+		  	padding-top: 0.3em;
+		  }
+		  
+		  #navigation li {
+		    padding-bottom: 0.35em;
+		  }
+		  
+		  #navigation ul {
+		    padding-bottom: 0.3em;
+		  }
+		  
+		  #navigation li ul, #navigation li ol {
+		    margin: 0.2em 0 -0.5em 0;
+		    font-size: 100%;
+		  }
+		
+		#content, #title p {
+		  width: 74%;
+		}
+		
+		#footer {
+		  text-align: center;
+		  font-size: 65%;
+		  padding: 10em 0 3em 0;
+		}
+		
+		#sflogo {
+		  float: right;
+		}
+		
+		</style>
+		
+		<!--[if IE]>
+		<style type="text/css" media="all">
+		
+		#navigation {
+		  position: relative;
+		  top: 0;
+		  left: 5%;
+		  width: 90%;
+		  height: auto;
+		  margin-bottom: 2em;
+		}
+		
+		#content, #title p {
+		  width: 100%;
+		}
+		
+		code, .code {
+			font-size: 90%;
+		}
+		
+		</style>
+		<![endif]-->
+		
+		<style type="text/css" media="print">
+		
+		#navigation {
+		  position: relative;
+		  top: 0;
+		  left: 3em;
+		  width: 40%;
+		  height: auto;
+		  margin-bottom: 2em;
+		  
+		  color: black;
+		  background-color: white;
+		  border-color: gray;
+		}
+		
+		  #navigation h2 {
+		    border-color: black;
+		  }
+		  
+		  #navigation a {
+		    color: black;
+		  }
+		
+		#content, #title p {
+		  width: 100%;
+		}
+		
+		pre {
+		  margin: 0 0 1.5em 0;
+		}
+		
+		</style>
+		
+	</head>
+	<body>
+
+    <div id="title">
+  		<h1><a name="top">Email Documentation</a></h1>
+  		<p>
+  		   This documentation refers to the<strong>
+  		   
+  		   2.0.1
+  		   
+  		   </strong>revision of email. For other versions please see the
+  		   documentation included with your download.
+  		</p>
+  		<p>
+  		  For more information, not presented here, please see the <a
+  		  href="http://poss.sourceforge.net/email/">email website</a> or contact
+  		  the author by sending a message to &lt;<a
+  		  href="mailto:jtjacques@users.sourcforge.net">jtjacques@users.sourceforge.net</a>&gt;.
+  		</p>
+		</div>
+
+		<div id="navigation">
+			<h2 class="top"><a href="#top">^ Top</a></h2>
+		  <h2><a href="#about">About Email</a></h2>
+			<ul>
+				<li><a href="#about010">What is email?</a></li>
+				<li>
+				  <a href="#about020">Why use email?</a>
+				  <ul>
+				    <li><a href="#about025">Why <strong>not</strong> to</a></li>
+				  </ul>
+				</li>
+				<li><a href="#about030">System requirements</a></li>
+				<li><a href="#about040">Comments</a>
+				  <ul>
+				    <li><a href="#about045">Bug reporting</a></li>
+				  </ul></li>
+				<li><a href="#about050">Copyright &amp; License</a></li>
+			</ul>
+		  <h2><a href="#object">Object Reference</a></h2>
+			<ul>
+				<li><a href="#object010">Methods</a>
+					<ul>
+				    <li><a href="#object011">email</a></li>
+				    <li><a href="#object012">setDNS</a></li>
+				    <li><a href="#object013">addRecipient</a></li>
+				    <li><a href="#object018">setSubject</a></li>
+				    <li><a href="#object014">addHeader</a></li>
+				    <li><a href="#object015">setMessage</a></li>
+				    <li><a href="#object016">setAnnounceEmail</a></li>
+				    <li><a href="#object017">send</a></li>
+				  </ul></li>
+				<li><a href="#object020">Unsupported methods</a>
+					<ul>
+				    <li><a href="#object021">getStatus</a></li>
+				    <li><a href="#object022">checkValue</a></li>
+				    <li><a href="#object023">mxQuery class</a></li>
+				  </ul></li>
+				<li><a href="#object050">Examples</a>
+					<ol>
+				    <li><a href="#objectEx01">Sending mail</a></li>
+				    <li><a href="#objectEx02">Additional headers</a></li>
+				    <li><a href="#objectEx03">Envelope sender</a></li>
+				    <li><a href="#objectEx04">Sending HTML mail</a></li>
+				  </ol></li>
+			</ul>
+		  <h2><a href="#function">Function Reference</a></h2>
+			<ul>
+				<li><a href="#function010">Requirements</a></li>
+				<li><a href="#function020">Description</a></li>
+				<li><a href="#function030">Parameters</a></li>
+				<li><a href="#function040">Return values</a></li>
+				<li><a href="#function050">Examples</a>
+					<ol>
+				    <li><a href="#functionEx01">Sending mail</a></li>
+				    <li><a href="#functionEx02">Additional headers</a></li>
+				    <li><a href="#functionEx03">Additional parameters</a></li>
+				    <li><a href="#functionEx04">Sending HTML mail</a></li>
+				  </ol></li>
+				<li><a href="#function060">Notes</a></li>
+			</ul>
+		  <h2><a href="#notes">Notes</a></h2>
+			<ul>
+				<li><a href="#notes010">General notes</a></li>
+				<li><a href="#notes020">Terminology</a></li>
+			</ul>
+		</div>
+
+
+		<div id="content">
+
+			<h2><a name="about">About Email</a></h2>
+			<p>
+			  Information about the email script.
+			</p>
+			
+			<h3><a name="about010">What is email?</a></h3>
+			<p>
+			  Email is a multi-platform <acronym
+			  title="Mail Transfer Agent">MTA</acronym> script for PHP 4.3 and above.
+			  Email brings configuration free mail deployment to PHP by utilising
+			  core PHP APIs to directly deliver mail to their intended destinations
+			  and giving real-time indications of delivery success.
+			</p>
+			<p>
+			  Email utilises a comprehensive object model to allow safe, reliable
+			  constructs for mail creation and dispatch. For backwards
+			  compatibility, and full functional compatibility with the built in PHP
+			  <a href="http://www.php.net/manual/en/function.mail.php">mail()</a>
+			  function email also provides a function method which can be invoked to
+			  provide simpler, more compatible access.
+			</p>
+			
+			<h3><a name="about020">Why use email?</a></h3>
+			<p>
+			  Email provides a configuration free method of sending mail from
+			  PHP scripts and does <strong>not</strong> depend on sendmail or a third
+			  party <acronym title="Simple Mail Transfer Protocol">SMTP</acronym>
+			  relay server as with the built in mail() function. Email 
+			  also provides real-time feedback on the mail delivery status allowing
+			  much more intelligent script operation. To improve the chance of
+			  successful message delivery email uses intelligent defaults for all the
+			  required fields of a message  - significantly reducing the delivery
+			  failure rate with no additional effort on the part of the developer.
+			</p>
+			<p>
+			  Email provides a powerful object-oriented system to send mail from
+			  PHP scripts which allows messages to be easily created and sent using
+			  simple and intelligent access methods. One of email's most popular
+			  uses is as a drop-in replacement for the PHP mail() function where
+			  it provides full functional compatibility using the email() function
+			  call method of invocation.
+			</p>
+			<h4><a name="about025">Why not to use email</a></h4>
+			<p>
+			  Simply put, email is inefficient. As email has to directly contact
+			  the receiving server for each message and actually push the message
+			  content to that server; email introduces an appreciable delay in sending
+			  each message. While this direct access allows email to provide
+			  real-time delivery status information it can also hold up the script
+			  to an unacceptable level.
+			</p>
+			<p>
+			  Email also opens an SMTP connection for
+			  each message it dispatches, rather than sending messages destined for
+			  the same provider in a bulk transaction. This
+			  creates additional <acronym title="Domain Name System">DNS</acronym>
+			  look-up and connection delays. One of the long term development goals
+			  for email is to intelligently batch together messages sent in the same
+			  call to remove these additional delays.
+			</p>
+			
+			<h3><a name="about030">System Requirements</a></h3>
+			<p>
+			  Email requires PHP 4.3 or above and fully supports PHP 5. To maintain
+			  compatibility with PHP 4 email lacks private variables and methods.
+			  As such only documented methods are supported.
+			</p>
+			
+			<h3><a name="about040">Comments</a></h3>
+			<p>
+			  Comments, suggestions, support and feature requests can be directed to
+			  <a href="mailto:jtjacques@users.sourceforge.net">jtjacques@users.sourceforge.net</a>.
+			  Please be aware that it may take some time to respond to requests and
+			  without detailed information it may not be possible to offer assistance.
+			</p>
+			<h4><a name="about045">Bug Reporting</a></h4>
+			<p>
+			  If you are submitting a bug or support request, please provide the
+			  output of <a href="#object021">getStatus()</a> if possible in your
+			  message as this will greatly reduce debugging time in most cases. If
+			  you are using the function interface, email(), please attempt to use
+			  the <a href="#objectEx01">object interface</a> to verify correct
+			  operation in your environment before submitting a support request.
+			</p>
+			
+			<h3><a name="about050">Copyright &amp; License</a></h3>
+			<p>
+			  Email is Copyright &copy; 2005-2008 Jason Jacques &lt;<a
+			  href="mailto:jtjacques@users.sourceforge.net">jtjacques@users.sourceforge.net</a>&gt;.
+			</p>
+			<p>
+			  Email is licensed under the MIT license, a copy of which is shown here.
+			</p>
+			<pre>Copyright (c) 2005-2008 Jason Jacques &lt;jtjacques@users.sourceforge.net&gt;
+			
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do 
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+
+
+      <h2><a name="object">Object Reference</a></h2>
+			<p>
+			  Email includes an object oriented interface which provides simple
+			  and powerful access to all available features.
+			</p>
+			
+			<h3><a name="object010">Methods</a></h3>
+			<p>
+			  Email contains many methods to allow messages to be easily generated
+			  and dispatched. Undocumented methods may change between releases and
+			  are not recommended for production use.
+			</p>
+			
+			<h4><a name="object011">email
+				<span class="vars">( [string $dns] )</span>
+				<span class="comment">constructor</span></a></h4>
+			<p>
+				Returns object.
+			</p>
+			<h5 class="desc">dns <span>(optional)</span></h5>
+			<p class="desc">
+				The IP address or fully qualified domain name of a recursive DNS
+				server. This allows the default DNS server, 208.67.222.222
+				provided by <a href="http://www.opendns.com">OpenDNS</a>, to be
+				changed.
+			</p>
+			
+			<h4><a name="object012">setDNS
+				<span class="vars">( string $dns )</span></a></h4>
+			<p>
+				Allows the default DNS server, 208.67.222.222	provided by
+				<a href="http://www.opendns.com">OpenDNS</a>, to be changed.
+			</p>
+			<p>
+				Returns <span class="bool">TRUE</span> on success,
+				<span class="bool">FALSE</span> on failure.
+			</p>
+			<h5 class="desc">dns</h5>
+			<p class="desc">
+				The IP address or fully qualified domain name of a recursive DNS
+				server.
+			</p>
+			
+			<h4><a name="object013">addRecipient
+				<span class="vars">( [string $name,] string $email )</span></a></h4>
+			<p>
+				Adds a recipient for this message.
+			</p>
+			<p>
+				Returns <span class="bool">TRUE</span> on success,
+				<span class="bool">FALSE</span> on failure.
+			</p>
+			<h5 class="desc">name <span>(optional)</span></h5>
+			<p class="desc">
+				The name of the recipient.
+			</p>
+			<h5 class="desc">email</h5>
+			<p class="desc">
+				The email address of the recipient.
+			</p>
+			
+			<h4><a name="object018">setSubject
+				<span class="vars">( string $subject )</span></a></h4>
+			<p>
+				Sets the message subject.
+			</p>
+			<p>
+				Returns <span class="bool">TRUE</span> on success,
+				<span class="bool">FALSE</span> on failure.
+			</p>
+			<h5 class="desc">subject</h5>
+			<p class="desc">
+				The message subject.
+			</p>
+			
+			<h4><a name="object014">addHeader
+				<span class="vars">( string $header
+				[, string $content] )</span></a></h4>
+			<p>
+				Adds a header for this message. If header already exists, overwrite.
+				Headers must be added one at a time.
+			</p>
+			<p>
+				Returns <span class="bool">TRUE</span> on success,
+				<span class="bool">FALSE</span> on failure.
+			</p>
+			<h5 class="desc">header</h5>
+			<p class="desc">
+				The name of the header <strong>or</strong> full header including
+				content, colon delimited.
+			</p>
+			<h5 class="desc">content <span>(optional)</span></h5>
+			<p class="desc">
+				The content for the header.
+			</p>
+			
+			<h4><a name="object015">setMessage
+				<span class="vars">( string $message )</span></a></h4>
+			<p>
+				Sets the message content.
+			</p>
+			<p>
+				Returns <span class="bool">TRUE</span>.
+			</p>
+			<h5 class="desc">message</h5>
+			<p class="desc">
+				Freeform message content.
+			</p>
+			<p class="desc">
+        Each line should be seperated with a LF (\n). Lines should not be
+        longer than 70 characters.
+			</p>
+			
+			<h4><a name="object016">setAnnounceEmail
+				<span class="vars">( string $email )</span></a></h4>
+			<p>
+				The email to report during connection to the receiving mail server.
+				Defaults to the address specified in the <em>From</em> header if not
+				specified.
+			</p>
+			<p>
+				Returns <span class="bool">TRUE</span> on success,
+				<span class="bool">FALSE</span> on failure.
+			</p>
+			<h5 class="desc">email</h5>
+			<p class="desc">
+				Email address.
+			</p>
+			
+			<h4><a name="object017">send
+				<span class="vars">( )</span></a></h4>
+			<p>
+				Sends the message.
+			</p>
+			<p>
+				Returns <span class="bool">TRUE</span> on success,
+				<span class="bool">FALSE</span> on failure.
+			</p>
+			
+			
+			<h3><a name="object020">Unsupported Methods</a></h3>
+			<p>
+			  These methods are unsupported and may change from release to release,
+			  however, they are documented for more advanced use of the library.
+			</p>
+			
+			<h4><a name="object021">getStatus
+				<span class="vars">( )</span></a></h4>
+			<p>
+				Returns a status array. The array has one top level item for each
+				destination address.
+			</p>
+			<p>
+				Returns <span class="bool">Array</span>.
+			</p>
+			<h5>Example Array</h5>
+			<p>
+				For the purpose of bug reporting binary responses are <a
+				href="http://www.php.net/base64_decode">base64</a> encoded
+				to preserve data. Message content is <a
+				href="http://www.php.net/str_rot13">ROT13</a> encoded to provided
+				limited privacy. <strong>Note:</strong> If submitting a bug report
+				you may remove the message data and subject header. Please leave
+				any email addresses intact as this will assist with debugging.
+			</p>
+			<p>
+			  In this example we see the first address fail as email was unable to
+			  connect to the MX server. This is indicated by the blank representing
+			  a <span class="bool">FALSE</span> value after the [connected]
+			  key in the array. In fact upon further investigation we find
+			  that there is no MX server for homedsl.co.uk and email intelligently
+			  fell back to the domain itself.
+			</p>
+			<p>
+				With the second address a connection was made to a GMail MX server,
+				which refused the message. On further investigation we find that our
+				IP address is on the residential list (which it is indeed) at <a
+				href="http://www.spamhaus.org/">http://www.spamhaus.org/</a> and many
+				services such as Hotmail and GMail will refuse mail from this IP
+				address.
+			</p>
+			<pre>
+Array
+(
+    [0] =&gt; Array
+        (
+            [name] =&gt; Jason Jacques
+            [address] =&gt; jason@homedsl.co.uk
+            [domain] =&gt; homedsl.co.uk
+            [mxAddress] =&gt; homedsl.co.uk
+            [fromAddress] =&gt; jtjacques@users.sourceforge.net
+            [headers] =&gt; To: &quot;Jason Jacques&quot; &lt;jason@homedsl.co.uk&gt;
+                         Subject: This is a test message.
+                         From: jtjacques@users.sourceforge.net
+                         Date: Thu, 08 Nov 2007 16:14:16 +0000
+                         X-Mailer: email 2.0.0
+
+            [message] =&gt; Guvf vf n grfg zrffntr.
+            [connected] =&gt; 
+        )
+
+    [1] =&gt; Array
+        (
+            [name] =&gt; jtjacques@gmail.com
+            [address] =&gt; jtjacques@gmail.com
+            [domain] =&gt; gmail.com
+            [mxAddress] =&gt; gmail-smtp-in.l.google.com.
+            [fromAddress] =&gt; jtjacques@users.sourceforge.net
+            [headers] =&gt; To: &quot;jtjacques@gmail.com&quot; &lt;jtjacques@gmail.com&gt;
+                         Subject: This is a test message.
+                         From: jtjacques@users.sourceforge.net
+                         Date: Thu, 08 Nov 2007 16:14:16 +0000
+                         X-Mailer: email 2.0.0
+
+            [message] =&gt; Guvf vf n grfg zrffntr.
+            [connected] =&gt; 1
+            [mxResponse] =&gt; Array
+                (
+                    [0] =&gt; 220 mx.google.com ESMTP 31si4031447ugg
+
+                    [1] =&gt; 250 mx.google.com at your service
+
+                    [2] =&gt; 250 2.1.0 OK
+
+                    [3] =&gt; 250 2.1.5 OK
+
+                    [4] =&gt; 354 Go ahead
+
+                    [5] =&gt; 550-5.7.1 [79.76.xxx.xxx] The IP you're using to send email is not authorized 
+
+                    [6] =&gt; 550-5.7.1 to send email directly to our servers. Please use 
+
+                )
+
+        )
+)</pre>
+			
+			<h4><a name="object022">checkValue
+				<span class="vars">( string $variable )</span></a></h4>
+			<p>
+				Returns value of variable specified.
+			</p>
+			<h5 class="desc">variable</h5>
+			<p class="desc">
+				The variable to read.
+			</p>
+			
+			
+			<h4><a name="object023">mxQuery
+				<span class="comment">class</span></a></h4>
+			<p>
+				The mxQuery class is a supporting class which allows the system to
+				perform an MX lookup on unsupported operating systems. The interfaces
+				may change at	any time and the class is entirely unsupported.
+			</p>
+			
+			
+			<h3><a name="object050">Examples</a></h3>
+
+      <h4><a name="objectEx01">Example 1. Sending mail.</a></h4>
+      <p>
+        Use email to send a simple message:
+      </p>
+			<code>
+				<font color="#0000CC">&lt;?php
+				<br />
+				<br /></font><font color="#FF9900">// Include email class and email() function
+				<br /></font><font color="#006600">require_once(</font><font color="#CC0000">'email.php'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Create new instance of email
+				<br /></font><font color="#0000CC">$email </font><font color="#006600">= new </font><font color="#0000CC">Email</font><font color="#006600">();
+				<br />
+				<br /></font><font color="#FF9900">// Add recipient
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addRecipient</font><font color="#006600">(</font><font color="#CC0000">'caffinated@example.com'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Set subject
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">setSubject</font><font color="#006600">(</font><font color="#CC0000">'My Subject'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Set message
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">setMessage</font><font color="#006600">(</font><font color="#CC0000">"Line 1\nLine 2\nLine 3"</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Send message
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">send</font><font color="#006600">();
+				<br />
+				<br /></font><font color="#0000CC">?&gt;
+				<br /></font>
+			</code>
+
+      <h4><a name="objectEx02">Example 2. Sending mail with additional
+      		headers.</a></h4>
+      <p>
+        The addition of basic headers, telling the MUA the From and
+        Reply-To addresses:
+      </p>
+			<code>
+				<font color="#0000CC">&lt;?php
+				<br />
+				<br /></font><font color="#FF9900">// Include email class and email() function
+				<br /></font><font color="#006600">require_once(</font><font color="#CC0000">'email.php'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Create new instance of email
+				<br /></font><font color="#0000CC">$email </font><font color="#006600">= new </font><font color="#0000CC">Email</font><font color="#006600">();
+				<br />
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addRecipient</font><font color="#006600">(</font><font color="#CC0000">'nobody@example.com'</font><font color="#006600">);
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">setSubject</font><font color="#006600">(</font><font color="#CC0000">'the subject'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Additional headers
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addHeader</font><font color="#006600">(</font><font color="#CC0000">'From'</font><font color="#006600">, </font><font color="#CC0000">'webmaster@example.com'</font><font color="#006600">);
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addHeader</font><font color="#006600">(</font><font color="#CC0000">'Reply-To'</font><font color="#006600">, </font><font color="#CC0000">'webmaster@example.com'</font><font color="#006600">);
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addHeader</font><font color="#006600">(</font><font color="#CC0000">'X-Mailer'</font><font color="#006600">, </font><font color="#CC0000">'PHP/' </font><font color="#006600">. </font><font color="#0000CC">phpversion</font><font color="#006600">());
+				<br />
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">setMessage</font><font color="#006600">(</font><font color="#CC0000">'hello'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">send</font><font color="#006600">();
+				<br />
+				<br /></font><font color="#0000CC">?&gt;
+				<br /></font>
+			</code>
+
+      <h4><a name="objectEx03">Example 3. Setting the envelope sender.</a></h4>
+      <p>
+        The system can report a different sender to the receiving mail server
+        during the connection process. This is equivilant to the <em>-f</em>
+        parameter on previous versions of email.
+      </p>
+			<code>
+				<font color="#0000CC">&lt;?php
+				<br />
+				<br /></font><font color="#FF9900">// Include email class and email() function
+				<br /></font><font color="#006600">require_once(</font><font color="#CC0000">'email.php'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Create new instance of email
+				<br /></font><font color="#0000CC">$email </font><font color="#006600">= new </font><font color="#0000CC">Email</font><font color="#006600">();
+				<br />
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addRecipient</font><font color="#006600">(</font><font color="#CC0000">'nobody@example.com'</font><font color="#006600">);
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">setSubject</font><font color="#006600">(</font><font color="#CC0000">'the subject'</font><font color="#006600">);
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">setMessage</font><font color="#006600">(</font><font color="#CC0000">'the message'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Set envelope sender reported to destination MX server
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">setAnnounceEmail</font><font color="#006600">(</font><font color="#CC0000">'webmaster@example.com'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">send</font><font color="#006600">();
+				<br />
+				<br /></font><font color="#0000CC">?&gt;
+				<br /></font>
+			</code>
+
+      <h4><a name="objectEx04">Example 4. Sending HTML mail.</a></h4>
+      <p>
+        It is also possible to send HTML messages with email().
+      </p>
+			<code>
+				<font color="#0000CC">&lt;?php
+				<br />
+				<br /></font><font color="#FF9900">// Include email class and email() function
+				<br /></font><font color="#006600">require_once(</font><font color="#CC0000">'email.php'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Create new instance of email
+				<br /></font><font color="#0000CC">$email </font><font color="#006600">= new </font><font color="#0000CC">Email</font><font color="#006600">();
+				<br />
+				<br /></font><font color="#FF9900">// Multiple recipients
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addRecipient</font><font color="#006600">(</font><font color="#CC0000">'aidan@example.com'</font><font color="#006600">);
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addRecipient</font><font color="#006600">(</font><font color="#CC0000">'wez@example.com'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Subject
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">setSubject</font><font color="#006600">(</font><font color="#CC0000">'Birthday Reminders for August'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// message
+				<br /></font><font color="#0000CC">$message </font><font color="#006600">= </font><font color="#CC0000">'
+				<br />&lt;html&gt;
+				<br />&lt;head&gt;
+				<br />&lt;title&gt;Birthday Reminders for August&lt;/title&gt;
+				<br />&lt;/head&gt;
+				<br />&lt;body&gt;
+				<br />&lt;p&gt;Here are the birthdays upcoming in August!&lt;/p&gt;
+				<br />&lt;table&gt;
+				<br />&lt;tr&gt;
+				<br />&lt;th&gt;Person&lt;/th&gt;&lt;th&gt;Day&lt;/th&gt;&lt;th&gt;Month&lt;/th&gt;&lt;th&gt;Year&lt;/th&gt;
+				<br />&lt;/tr&gt;
+				<br />&lt;tr&gt;
+				<br />&lt;td&gt;Joe&lt;/td&gt;&lt;td&gt;3rd&lt;/td&gt;&lt;td&gt;August&lt;/td&gt;&lt;td&gt;1970&lt;/td&gt;
+				<br />&lt;/tr&gt;
+				<br />&lt;tr&gt;
+				<br />&lt;td&gt;Sally&lt;/td&gt;&lt;td&gt;17th&lt;/td&gt;&lt;td&gt;August&lt;/td&gt;&lt;td&gt;1973&lt;/td&gt;
+				<br />&lt;/tr&gt;
+				<br />&lt;/table&gt;
+				<br />&lt;/body&gt;
+				<br />&lt;/html&gt;
+				<br />'</font><font color="#006600">;
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">setMessage</font><font color="#006600">(</font><font color="#0000CC">$message</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// To send HTML mail, the Content-type header must be set
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addHeader</font><font color="#006600">(</font><font color="#CC0000">'MIME-Version'</font><font color="#006600">, </font><font color="#CC0000">'1.0'</font><font color="#006600">);
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addHeader</font><font color="#006600">(</font><font color="#CC0000">'Content-type'</font><font color="#006600">, </font><font color="#CC0000">'text/html; charset=iso-8859-1'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Additional headers
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addHeader</font><font color="#006600">(</font><font color="#CC0000">'To'</font><font color="#006600">, </font><font color="#CC0000">'Mary &lt;mary@example.com&gt;, Kelly &lt;kelly@example.com&gt;'</font><font color="#006600">);
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addHeader</font><font color="#006600">(</font><font color="#CC0000">'From'</font><font color="#006600">, </font><font color="#CC0000">'Birthday Reminder &lt;birthday@example.com&gt;'</font><font color="#006600">);
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addHeader</font><font color="#006600">(</font><font color="#CC0000">'Cc:'</font><font color="#006600">, </font><font color="#CC0000">'birthdayarchive@example.com'</font><font color="#006600">);
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">addHeader</font><font color="#006600">(</font><font color="#CC0000">'Bcc:'</font><font color="#006600">, </font><font color="#CC0000">'birthdaycheck@example.com'</font><font color="#006600">);
+				<br />
+				<br /></font><font color="#FF9900">// Send message
+				<br /></font><font color="#0000CC">$email</font><font color="#006600">-&gt;</font><font color="#0000CC">send</font><font color="#006600">();
+				<br />
+				<br /></font><font color="#0000CC">?&gt;</font>
+				</font>
+			</code>
+
+			
+			
+			
+			
+			<h2><a name="function">Function Reference</a></h2>
+			<p>
+			  Email includes a function interface to allow it to be used as a drop in
+			  replacement for the built in PHP function, mail().
+			</p>
+			
+			<h3><a name="function010">Requirements</a></h3>
+			<p>
+			  To use email the email script must be included into the calling script.
+			  It is strongly recommended that this is done using the require_once()
+			  directive, just prior to the execution of email(). The following
+			  example assumes the email.php script is located in the same directory
+			  or in the PHP include path.
+			</p>
+			<pre class="code">&lt;?php<span class="comment">
+// Include email class and email() function</span>
+require_once<span class="enc">(</span><span class="string">'email.php'</span><span class="enc">);</span>
+?&gt;</pre>
+
+			
+			<h3><a name="function020">Description</a></h3>
+			<p>
+			  bool <strong>email</strong> ( string $to, string $subject,
+			  string $message [, string $additional_headers [, 
+			  string $additional_parameters]] )
+			</p>
+			<p>
+			  Sends an email message.
+			</p>
+			
+			<h3><a name="function030">Parameters</a></h3>
+			<h4 class="desc">to</h4>
+			<p class="desc">
+			  Receiver or recievers of the email.
+			</p>
+			<p class="desc">
+        The fomatting of this string must comply to RFC 2822. Some examples
+        are:
+      </p>
+      <p class="desc">
+        user@example.com<br />
+        user@example.com, anotheruser@example.com<br />
+        User &lt;user@example.com&gt;, Another User
+        &lt;anotheruser@example.com&gt;
+			</p>
+			
+			<h4 class="desc">subject</h4>
+			<p class="desc">
+			  Subject of the message to be sent.
+			</p>
+			
+			<h4 class="desc">message</h4>
+			<p class="desc">
+			  Message to be sent.
+			</p>
+			<p class="desc">
+        Each line should be seperated with a LF (\n). Lines should not be
+        longer than 70 characters.
+			</p>
+			
+			<h4 class="desc">additional_headers <span>(optional)</span></h4>
+			<p class="desc">
+			  String to be inserted at the end of the message header.
+			</p>
+			<p class="desc">
+        This is typically used to add extra headers (From, Cc, and Bcc).
+        Multiple headers should be seperated by CRLF (\r\n).
+			</p>
+			
+			<h4 class="desc">additional_parameters <span>(optional)</span></h4>
+			<p class="desc">
+        The additional_parameters parameter can be used to pass additional
+        parameters to email(). At present the only avaliable additional
+        parameter is the <em>-f</em> parameter to set the envelope sender. See
+        <a href="#functionEx03"class="example">Example 3.<a/> for an example.
+        Other additional parameters will be ignored.
+			</p>
+			
+			
+			<h3><a name="function040">Return Values</a></h3>
+			<p>
+			  Returns <span class="bool">TRUE</span> if the message was successfully
+			  delivered, <span class="bool">FALSE</span> otherwise.
+			</p>
+			
+			
+			<h3><a name="function050">Examples</a></h3>
+
+      <h4><a name="functionEx01">Example 1. Sending mail.</a></h4>
+      <p>
+        Use email to send a simple message:
+      </p>
+			<code>
+				<font color="#000000"><font color="#0000CC">&lt;?php<br />
+				</font><font color="#FF9900">// Include email() function.<br />
+				</font><font color="#006600">require_once(</font><font
+				color="#CC0000">"email.php"</font><font color="#006600">);<br />
+				<br />
+				</font><font color="#FF9900">// The message<br />
+				</font><font color="#0000CC">$message</font> <font color="#006600">=</font> <font
+				color="#CC0000">"Line 1\nLine 2\nLine 3"</font><font color="#006600">;<br />
+				<br />
+				</font><font color="#FF9900">// Send<br />
+				</font><font color="#0000CC">email</font><font color="#006600">(</font><font
+				color="#CC0000">'caffinated@example.com'</font><font color="#006600">,</font> <font
+				color="#CC0000">'My Subject'</font><font color="#006600">,</font> <font
+				color="#0000CC">$message</font><font color="#006600">);<br />
+				</font><font color="#0000CC">?&gt;<br />
+				</font>
+			</code>
+
+
+      <h4><a name="functionEx02">Example 2. Sending mail with additional
+      		headers.</a></h4>
+      <p>
+        The addition of basic headers, telling the MUA the From and Reply-To
+        addresses:
+      </p>
+			<code>
+				<font color="#0000CC">&lt;?php<br />
+				</font><font color="#FF9900">// Include email() function.<br />
+				</font><font color="#006600">require_once(</font><font
+				color="#CC0000">"email.php"</font><font color="#006600">);<br />
+				<br />
+				</font><font color="#0000CC">$to</font> <font color="#006600">=</font> <font
+				color="#CC0000">'nobody@example.com'</font><font color="#006600">;<br />
+				</font><font color="#0000CC">$subject</font> <font color="#006600">=</font> <font
+				color="#CC0000">'the subject'</font><font color="#006600">;<br />
+				</font><font color="#0000CC">$message</font> <font color="#006600">=</font> <font
+				color="#CC0000">'hello'</font><font color="#006600">;<br />
+				</font><font color="#0000CC">$headers</font> <font color="#006600">=</font> <font
+				color="#CC0000">'From: webmaster@example.com'</font> <font color="#006600">.</font>
+				<font color="#CC0000">"\r\n"</font> <font color="#006600">.<br />
+				</font> <font color="#CC0000">'Reply-To: webmaster@example.com'</font> <font
+				color="#006600">.</font> <font color="#CC0000">"\r\n"</font> <font
+				color="#006600">.<br />
+				</font> <font color="#CC0000">'X-Mailer: PHP/'</font> <font color="#006600">.</font>
+				<font color="#0000CC">phpversion</font><font color="#006600">();<br />
+				<br />
+				</font><font color="#0000CC">email</font><font color="#006600">(</font><font
+				color="#0000CC">$to</font><font color="#006600">,</font> <font
+				color="#0000CC">$subject</font><font color="#006600">,</font> <font
+				color="#0000CC">$message</font><font color="#006600">,</font> <font
+				color="#0000CC">$headers</font><font color="#006600">);<br />
+				</font><font color="#0000CC">?&gt;<br />
+				</font>
+			</code>
+
+
+      <h4><a name="functionEx03">Example 3. Sending mail with an additional
+      		command line parameter.</a></h4>
+      <p>
+        The <em>additional_parameters</em> parameter can be used to send an
+        additional parameter to the function.
+      </p>
+			<code>
+				<font color="#0000CC">&lt;?php<br />
+				</font><font color="#FF9900">// Include email() function.<br />
+				</font><font color="#006600">require_once(</font><font
+				color="#CC0000">"email.php"</font><font color="#006600">);<br />
+				<br />
+				</font><font color="#0000CC">email</font><font color="#006600">(</font><font
+				color="#CC0000">'nobody@example.com'</font><font color="#006600">,</font> <font
+				color="#CC0000">'the subject'</font><font color="#006600">,</font> <font
+				color="#CC0000">'the message'</font><font color="#006600">,</font> <font
+				color="#0000CC">null</font><font color="#006600">,<br />
+				</font> <font color="#CC0000">'-fwebmaster@example.com'</font><font
+				color="#006600">);<br />
+				</font><font color="#0000CC">?&gt;<br />
+				</font>
+			</code>
+			
+			
+      <h4><a name="functionEx04">Example 4. Sending HTML mail.</a></h4>
+      <p>
+        It is also possible to send HTML messages with email().
+      </p>
+			<code>
+				<font color="#0000CC">&lt;?php<br />
+				</font><font color="#FF9900">// Include email() function.<br />
+				</font><font color="#006600">require_once(</font><font
+				color="#CC0000">"email.php"</font><font color="#006600">);<br />
+				<br />
+				</font><font color="#FF9900">// multiple recipients<br />
+				</font><font color="#0000CC">$to</font> <font color="#006600">=</font> <font
+				color="#CC0000">'aidan@example.com'</font> <font color="#006600">.</font> <font
+				color="#CC0000">', '</font><font color="#006600">;</font> <font color="#FF9900">//
+				note the comma<br />
+				</font><font color="#0000CC">$to</font> <font color="#006600">.=</font> <font
+				color="#CC0000">'wez@example.com'</font><font color="#006600">;<br />
+				<br />
+				</font><font color="#FF9900">// subject<br />
+				</font><font color="#0000CC">$subject</font> <font color="#006600">=</font> <font
+				color="#CC0000">'Birthday Reminders for August'</font><font color="#006600">;<br />
+				<br />
+				</font><font color="#FF9900">// message<br />
+				</font><font color="#0000CC">$message</font> <font color="#006600">=</font> <font
+				color="#CC0000">'<br />
+				&lt;html&gt;<br />
+				&lt;head&gt;<br />
+				 &lt;title&gt;Birthday Reminders for August&lt;/title&gt;<br />
+				&lt;/head&gt;<br />
+				&lt;body&gt;<br />
+				 &lt;p&gt;Here are the birthdays upcoming in August!&lt;/p&gt;<br />
+				 &lt;table&gt;<br />
+				 &lt;tr&gt;<br />
+				 &lt;th&gt;Person&lt;/th&gt;&lt;th&gt;Day&lt;/th&gt;&lt;th&gt;Month&lt;/th&gt;&lt;th&gt;Year&lt;/th&gt;<br />
+		
+				 &lt;/tr&gt;<br />
+				 &lt;tr&gt;<br />
+				 &lt;td&gt;Joe&lt;/td&gt;&lt;td&gt;3rd&lt;/td&gt;&lt;td&gt;August&lt;/td&gt;&lt;td&gt;1970&lt;/td&gt;<br />
+		
+				 &lt;/tr&gt;<br />
+				 &lt;tr&gt;<br />
+				 &lt;td&gt;Sally&lt;/td&gt;&lt;td&gt;17th&lt;/td&gt;&lt;td&gt;August&lt;/td&gt;&lt;td&gt;1973&lt;/td&gt;<br />
+		
+				 &lt;/tr&gt;<br />
+				 &lt;/table&gt;<br />
+				&lt;/body&gt;<br />
+				&lt;/html&gt;<br />
+				'</font><font color="#006600">;<br />
+				<br />
+				</font><font color="#FF9900">// To send HTML mail, the Content-type header must be
+				set<br />
+				</font><font color="#0000CC">$headers</font> <font color="#006600">=</font> <font
+				color="#CC0000">'MIME-Version: 1.0'</font> <font color="#006600">.</font> <font
+				color="#CC0000">"\r\n"</font><font color="#006600">;<br />
+				</font><font color="#0000CC">$headers</font> <font color="#006600">.=</font> <font
+				color="#CC0000">'Content-type: text/html; charset=iso-8859-1'</font> <font
+				color="#006600">.</font> <font color="#CC0000">"\r\n"</font><font
+				color="#006600">;<br />
+				<br />
+				</font><font color="#FF9900">// Additional headers<br />
+				</font><font color="#0000CC">$headers</font> <font color="#006600">.=</font> <font
+				color="#CC0000">'To: Mary &lt;mary@example.com&gt;, Kelly
+				&lt;kelly@example.com&gt;'</font> <font color="#006600">.</font> <font
+				color="#CC0000">"\r\n"</font><font color="#006600">;<br />
+				</font><font color="#0000CC">$headers</font> <font color="#006600">.=</font> <font
+				color="#CC0000">'From: Birthday Reminder &lt;birthday@example.com&gt;'</font> <font
+				color="#006600">.</font> <font color="#CC0000">"\r\n"</font><font
+				color="#006600">;<br />
+				</font><font color="#0000CC">$headers</font> <font color="#006600">.=</font> <font
+				color="#CC0000">'Cc: birthdayarchive@example.com'</font> <font
+				color="#006600">.</font> <font color="#CC0000">"\r\n"</font><font
+				color="#006600">;<br />
+				</font><font color="#0000CC">$headers</font> <font color="#006600">.=</font> <font
+				color="#CC0000">'Bcc: birthdaycheck@example.com'</font> <font
+				color="#006600">.</font> <font color="#CC0000">"\r\n"</font><font
+				color="#006600">;<br />
+				<br />
+				</font><font color="#FF9900">// Mail it<br />
+				</font><font color="#0000CC">email</font><font color="#006600">(</font><font
+				color="#0000CC">$to</font><font color="#006600">,</font> <font
+				color="#0000CC">$subject</font><font color="#006600">,</font> <font
+				color="#0000CC">$message</font><font color="#006600">,</font> <font
+				color="#0000CC">$headers</font><font color="#006600">);<br />
+				</font><font color="#0000CC">?&gt;<br />
+				</font>
+			</code>
+			
+			
+			<h3><a name="function060">Notes</a></h3>
+			<p>
+				Differences exist between mail() and email(). Please ensure that your
+				particular application is suited before	switching between the two
+				functions.
+			</p>
+			<p>
+			  <strong>Note:</strong> <em>additional_parameters</em> only supports
+			  <em>-f</em> as email() does not utilise sendmail.
+			</p>
+			<p>
+				<strong>Note:</strong> email() does not parse the <em>CC:</em> or
+				<em>BCC:</em> headers. Mail is only delivered to the user or users
+				specified in the <em>to</em> parameter.
+			</p>
+			
+			<h3><a name="function070">See Also</a></h3>
+			<ul>
+			  <li><a href="#notes010">General Notes</a></li>
+			  <li><a href="http://www.php.net/manual/en/function.mail.php">&raquo; 
+			  PHP.net mail()</a></li>
+			</ul>
+			
+			
+			
+			<h2><a name="notes">Notes</a></h2>
+			<p>
+			  These notes refer to email() when utilised via the function or object
+			  interfaces.
+			</p>
+			
+			<h3><a name="notes010">General Notes</a></h3>
+			<p>
+			  <strong>Note:</strong> It is worth noting that email is not suited to
+			  large volumes of email in a loop. This function opens and closes an
+			  SMTP connection and completes a DNS look-up for each receiving address
+			  for the message which is not very efficient.
+			</p>
+			
+			<h3><a name="notes020">Terminology</a></h3>
+  		<p>
+  		  <strong>Note:</strong> <em>email</em> refers to the email.php script
+  		  you have downloaded; <em>mail</em> and <em>message</em> refer to the
+  		  actual message and associated content the script will send to an
+  		  internet user; <em>mail()</em> refers to the built in PHP <a 
+			  href="http://www.php.net/manual/en/function.mail.php">mail()</a>
+  		  function.
+  		</p>
+			
+
+		</div>
+
+
+		<div id="footer">
+		  <div id="sflogo">
+		    <!--sflogo- a href="http://sourceforge.net"><img
+		    src="http://sflogo.sourceforge.net/sflogo.php?group_id=141168&type=1"
+		    alt="SourceForge.net" /></a -sflogo-->
+		  </div>
+		  Copyright 2005-2008 Jason Jacques &lt;<a
+		  href="mailto:jtjacques@users.sourceforge.net">jtjacques@users.sourceforge.net</a>&gt;.
+		</div>
+
+	</body>
+</html>

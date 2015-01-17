@@ -1,0 +1,23 @@
+#lightbox{
+	background-color:#EEEEEE;
+	padding: 10px;
+	}
+#lightboxDetails{
+	font: 11px verdana,helvetica,arial,sans-serif;
+	color:#000;
+	padding-top: 0.4em;
+	}	
+#lightboxCaption{ float: left; }
+#keyboardMsg{ float: right; }
+#closeButton{ top: 5px; right: 5px; }
+
+#lightbox img{ border: none; clear: both;} 
+#overlay img{ border: none; }
+
+#overlay{
+background-color: #000;
+filter:alpha(opacity=65);
+-moz-opacity:0.6;
+opacity:0.6;
+}
+

@@ -1,0 +1,509 @@
+/* LAYOUT ONLY!! */
+#container {
+	width: 780px;
+	border: 1px solid gray;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 3px; /*10px;*/
+	background-color: white;
+}
+#header {
+	padding: 10px;
+	margin-bottom: 5px;
+	background-color: white;
+	text-align: center;
+}
+#content {
+	margin-left: 175px;
+	padding: 20px;
+	background-color: white;
+	float: left; 
+	width: 555px; 
+	margin: 0 0 10px 0; 
+	display: inline; 
+	overflow: auto; 
+	position: relative;
+    margin-top: 0px;
+}
+#menu {
+	float: left;
+	width: 150px;
+	margin: 0;
+	margin-right: 5px;
+	padding: 10px;
+	background-color: white;
+}
+#footer {
+	clear: both;
+	padding: 5px;
+	margin-top: 5px;
+	background-color: white;
+	text-align: center;
+}
+
+/* THE LEFT MENU */
+ul#navlist
+{
+	width: 158px;
+	padding: 0px;
+	border: 1px solid #808080;
+	border-top: 0px;
+	margin: 0px;
+	font: bold 11px verdana,helvetica,arial,sans-serif;
+	background: #808080;
+}
+
+ul#navlist li
+{
+	list-style: none;
+	margin: 0px;
+	border: 0px;
+	border-top: 1px solid #808080;
+}
+
+ul#navlist li a
+{
+	display: block;
+	width: 122px;
+	padding: 4px 8px 4px 8px;
+	border: 0px;
+	border-left: 20px solid #aaaabb;
+	text-decoration: none;
+	text-align: right;
+	background: url(images/menubg.png) #d9dffb;
+}
+
+ul#navlist li a:link { color: #666677; }
+div#navcontainer li a:visited { color: #666677; }
+
+ul#navlist li a:hover
+{
+	border-color: #ff9000;
+	color: #ffffff;
+    background: url(images/menubg_hov.png) #d9dffb;
+}
+
+/* THIS IS USED TO DISPLAY A SELECTED GROUP IN THE MENU */
+#active a:link, #active a:visited, #active a:hover
+{
+	background: -webkit-gradient(radial, 50% 100%, 10, 50% 50%, 90, from(rgba(31,169,244,1)), to(rgba(107, 121, 148, 1)) );
+    background: -moz-radial-gradient(center 80px 45deg, circle cover, rgba(31,169,244,1) 0%, rgba(107, 121, 148, 1) 100%);
+}
+/* THE TOP MENU */
+.headerLogo {
+	background : -webkit-gradient(linear, left top, left bottom, from(rgb(107, 121, 148)), to(rgb(255, 255, 255)));
+    background : -moz-linear-gradient(top, rgb(107, 121, 148), rgb(255, 255, 255));
+	border-radius: 10px;
+	padding: 21px;
+}
+
+.navbar {
+    width: 100%;
+    height: 40px;
+    background : #464646;
+    background : -webkit-gradient(linear, left top, left bottom, from(rgb(168,168,168)), to(rgb(69,69,69)));
+    background : -moz-linear-gradient(top, rgb(168,168,168), rgb(69,69,69));
+	border-radius: 10px;
+    position: relative;
+    margin: 10px 0 20px 0;
+}
+ 
+.navbar ul {
+    height: 40px;
+    border-left: 1px solid rgba(0,0,0,0.3);
+    border-right: 1px solid rgba(255,255,255,0.3);
+	padding-left: 0;
+	margin-left: 31%;
+}
+ 
+.navbar ul li {
+    list-style: none;
+    float:left;
+    height: 40px;
+    text-align: center;
+    background: -webkit-gradient(radial, 50% 100%, 10, 50% 50%, 90, from(rgba(31,169,244,1)), to(rgba(107, 121, 148, 1)) );
+    background: -moz-radial-gradient(center 80px 45deg, circle cover, rgba(31,169,244,1) 0%, rgba(107, 121, 148, 1) 100%);
+    }
+ 
+.navbar ul li a {
+    display: block;
+    padding: 0 20px;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(0,0,0,0.1);
+    text-align: center;
+	color: #FFF;
+	text-decoration: none;
+    line-height: 40px;
+	background: #606060;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 700ms;
+    -moz-transition-property: background;
+    -moz-transition-duration: 700ms;
+    }
+ 
+.navbar ul li a:hover {
+    background: transparent none;
+}
+ 
+.navbar ul li.active a{
+    background: -webkit-gradient(radial, 50% 100%, 10, 50% 50%, 90, from(rgba(31,169,244,1)), to(rgba(107, 121, 148, 1)) );
+    background: -moz-radial-gradient(center 80px 45deg, circle cover, rgba(31,169,244,1) 0%, rgba(107, 121, 148, 1) 100%);
+}
+
+.navcontainerL {
+	margin-left: 9px;
+}
+
+.navcontainerR {
+	margin-left: 19px;
+}
+
+.navbarVert {
+	margin: 12px 20px 0 0;
+	padding: 0;
+	border: 1px solid #323232;
+}
+
+.navbarVertRight {
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topright: 8px;
+	-webkit-border-bottom-right-radius: 8px;
+	-moz-border-radius-bottomright: 8px;
+	margin-right: 10px;
+}
+
+ul.navbarVertRight li:first-child a, ul.navbarVertRight li:first-child {
+	-webkit-border-top-right-radius: 8px;
+	-moz-border-radius-topright: 8px;
+}
+
+ul.navbarVertRight > li:nth-child(1) {
+	-webkit-border-top-right-radius: 7px;
+	-moz-border-radius-topright: 7px;
+}
+
+ul.navbarVertRight > li:nth-last-child(1) > a {
+	-webkit-border-bottom-right-radius: 7px;
+	-moz-border-radius-bottomright: 7px;
+}
+
+ul.navbarVertRight > li:nth-last-child(1) {
+	-webkit-border-bottom-right-radius: 7px;
+	-moz-border-radius-bottomright: 7px;
+}
+
+.navbarVertLeft {
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+	-webkit-border-bottom-left-radius: 8px;
+	-moz-border-radius-bottomleft: 8px;
+}
+
+ul.navbarVertLeft li:first-child a, ul.navbarVertLeft li:first-child {
+	-webkit-border-top-left-radius: 8px;
+	-moz-border-radius-topleft: 8px;
+}
+
+ul.navbarVertLeft > li:nth-child(1) {
+	-webkit-border-top-left-radius: 7px;
+	-moz-border-radius-topleft: 7px;
+}
+
+ul.navbarVertLeft > li:nth-last-child(1) > a {
+	-webkit-border-bottom-left-radius: 7px;
+	-moz-border-radius-bottomleft: 7px;
+}
+
+ul.navbarVertLeft > li:nth-last-child(1) {
+	-webkit-border-bottom-left-radius: 7px;
+	-moz-border-radius-bottomleft: 7px;
+}
+
+ul.navbarVert li {
+	list-style: none;
+	position: relative;
+	line-height: 37px;
+	background: -webkit-gradient(radial,50% 100%,0,50% 100%,140,from(rgba(31,169,244,1)),to(rgba(107, 121, 148,1)));
+	background: -moz-radial-gradient(center 80px 45deg,circle cover,rgba(31,169,244,1) 0%,rgba(107, 121, 148,1) 100%);
+}
+
+ul.navbarVert li a {
+	background: -webkit-gradient(linear,left top,left bottom,from(rgba(117,117,117,1)),to(rgba(68,68,68,1)));
+	background: -moz-linear-gradient(top,rgba(117,117,117,1),rgba(68,68,68,1));
+	color: #FFF;
+	background: #606060;
+	display: block;
+	padding: 0 20px;
+	border-left: 1px solid rgba(255,255,255,0.1);
+	text-align: left;
+	border-bottom: 1px solid #323232;
+	border-top: 1px solid #868686;
+	border-right: 1px solid #5a5a5a;
+	color: #FFF;
+	text-decoration: none;
+	-webkit-transition-property: background;
+	-webkit-transition-duration: 700ms;
+	-moz-transition-property: background;
+	-moz-transition-duration: 700ms;
+}
+
+ul.navbarVert li a:hover {
+    background: transparent none;
+}
+
+/* TEXT MAKEUP AND OTHER COSMETICS HERE!!! */
+
+#hideable {
+	background-color: white;
+}
+
+/* image properties */
+.imgleft {
+	  float: left;
+      padding: 6px 10px 6px 0px;	  
+}
+
+.imgright {
+	  float: right;
+      padding: 6px 0px 6px 10px;	  
+}
+	
+img { 
+	  border-width: 0px; 
+}
+
+/* this image is used in details.php and browse.php, all other images should not have borders */
+.borderimg { 
+	  border-style:solid;
+      border-color: #D6DDE6;
+      border-width:1px;
+}
+
+/* general settings */
+html {
+    height: 100%;
+}
+
+body {
+	height: 100%;
+	font: 11px Verdana,Tahoma,Arial,sans-serif;
+	background: #6b7994;
+}
+
+/* the headings you can use */
+h1, h2, h3, h4, h5, h6, h7
+{
+	margin: 0px;
+	padding: 0px;
+	color: black;
+}
+h1 { 
+	 /* left menu */
+	 font-size: 13px;
+     font-weight: bold;
+	 color: #33517A;
+}
+h2 { /* page headers */
+	 font-size: 14px;
+     font-weight: bold;
+} 
+h3 { /* slogan under logo */ 
+	 font-size: 15px; 
+     font-weight: bolder;
+     position: relative;
+}
+h4 { /* back to admin options, and other text links like that */
+	 font-size: 12px;   
+	 text-align: center;
+     font-weight: normal;
+}
+h5 { /* product id in details.php */
+	 font-size: 12px;
+     font-weight: bold;
+} 
+h6 { /* the headers in editsettings.php */
+     font-size: 13px;   
+	 text-align: center;
+     font-weight: bold;
+     color: black;
+     border: 1px solid #808080;
+	 background: url(images/h6_bg.png) #d9dffb;
+}
+
+.mceEditorContainer {
+	width: 100% !important;
+}
+
+/* how the links should behave (apart from the menu) */
+a { text-decoration: underline; }
+a:link { color: #003366; }
+a:visited { color: #003366; }
+a:active { color: #003366; }
+a:hover { color: #0D4D89; }
+
+/* a link class that is pretty plain */
+a.plain { text-decoration: none; }
+a.plain:link { color: black; }
+a.plain:visited { color: black; }
+a.plain:active { color: black; }
+a.plain:hover { color: black; }
+
+/* single pixel borders on input boxes */
+input, textarea
+{
+   background-color: #ffffff;
+   border-width: 1px;
+   border-style: solid;
+   border-color: black;
+}
+
+/* content area DP*/
+#wrapper {
+	border-radius: 5px;
+	background-color: #FFF;
+	margin: 10px;
+	padding: 10px;
+	box-shadow: inset 0 0 10px #000000;
+}
+
+.sidePanel {
+	float: left;
+	width: 20%;
+}
+
+.mainPanel {
+	float: left;
+	width: 60%;
+}
+
+/* text in tables */
+td, th {
+	font: 11px Verdana,Tahoma,Arial,sans-serif;
+}
+/* tables of this class have no border */
+table#borderless {
+	border-collapse: collapse;
+	border-style: hidden;
+}
+table.borderless th,
+table.borderless td {
+	border: 0px;
+	padding: 5px;
+	border-style: hidden;
+	vertical-align: top;
+}
+table.borderless caption {
+		font-size: 14px;
+		font-weight: bold;
+		color: #33517A;
+		text-align: left;
+		padding-top: 3px;
+		padding-bottom: 8px;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+/* a class that describes how tables should look */
+.datatable {
+		border: 1px solid #666677;
+		margin-left:auto; 
+		margin-right:auto;
+		margin-top: 13px;
+		padding: 10px 10px 48px 10px;
+}/*
+.datatable span {
+		border: 1px solid #666677;	
+		padding: 4px;
+		text-align: left;
+    	vertical-align: top;
+		background-color: #FFFFFF;
+}*/
+.datatable th {
+		background-color: #ccccdd;
+		font-weight: bold;
+		color: #666677;
+		text-align: left;
+		padding: 4px;
+        border: 1px solid #808080;
+	    background: url(images/h6_bg.png) #d9dffb;
+}
+.datatable caption {
+		font-size: 14px;
+		font-weight: bold;
+		color: #33517A;
+		text-align: left;
+		padding-top: 3px;
+		padding-bottom: 8px;
+		margin-left: auto;
+		margin-right: auto;
+}
+.datatable tr.altrow {
+		background-color: #E9EEF5;
+		color: #000000;
+}
+
+.button {
+   background: #454545;
+   background: -webkit-gradient(linear, left top, left bottom, from(#a8a8a8), to(#454545));
+   background: -webkit-linear-gradient(top, #a8a8a8, #454545);
+   background: -moz-linear-gradient(top, #a8a8a8, #454545);
+   background: -ms-linear-gradient(top, #a8a8a8, #454545);
+   background: -o-linear-gradient(top, #a8a8a8, #454545);
+   padding: 5.5px 11px;
+   margin: 13px 0;
+   outline: none;
+   -webkit-border-radius: 18px;
+   -moz-border-radius: 18px;
+   border-radius: 18px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 11px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   cursor: pointer;
+}
+.button:hover {
+   border-top-color: #28597a;
+   background: -webkit-gradient(radial, 50% 100%, 10, 50% 50%, 90, from(rgba(31,169,244,1)), to(rgba(107, 121, 148, 1)) );
+   background: -moz-radial-gradient(center 80px 45deg,circle cover,rgba(31,169,244,1) 0%,rgba(107, 121, 148,1) 100%);
+   color: #ccc;
+}
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+}
+   
+/*.datatable tr:hover, .datatable tr.hilite {
+		background-color: #dff;
+		color: #000000;
+}*/
+	
+/* (?) popup properties */
+a.info{
+    position:relative; /*this is the key*/
+    z-index:24; background-color:red; 
+    color:#000;
+    text-decoration:none;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+a.info:hover{z-index:90; background-color:#ff0}
+
+a.info span{display: none}
+
+a.info:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position:absolute;
+    z-index: 90;
+    top:2em; left:1em; width:25em;
+    border:1px solid #0cf;
+    background-color:#cff; color:#000;
+    text-align: left
+}

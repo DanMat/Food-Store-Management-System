@@ -1,0 +1,791 @@
+Abu Dhabi
+Abu Dhabi (United Arab Emirates)
+Admiralty Islands
+Admiralty Islands (Papua New Guinea)
+Afars
+Afghanistan
+Aitutaki
+Aitutaki (Cook Islands) (New Zealand)
+Ajman
+Ajman (United Arab Emirates)
+Aland Island
+Aland Island (Finland)
+Albania
+Alberta (Canada)
+Alderney
+Alderney, Channel Islands (Great Britain)
+Algeria
+Alhucemas
+Alhucemas (Spain)
+Alofi Island
+Alofi Island (New Caledonia)
+American Samoa
+Andaman Islands
+Andaman Islands (India)
+Andorra
+Angola
+Anguilla
+Anjouan
+Anjouan (Comoros)
+Annobon Island
+Annobon Island (Equatorial Guinea)
+Antigua
+Antigua and Barbuda
+Argentina
+Armenia
+Aruba
+Ascension
+Astypalaia
+Astypalaia (Greece)
+Atafu
+Atafu (Western Samoa)
+Atiu
+Atiu (Cook Islands)
+Australia
+Austria
+Avarua
+Avarua (New Zealand)
+Azerbaijan
+Azores
+Azores (Portugal)
+Bahamas
+Bahrain
+Baker Island
+Balearic Islands
+Balearic Islands (Spain)
+Baluchistan
+Baluchistan (Pakistan)
+Bangladesh
+Bank Island
+Banks Island (Vanuatu)
+Barbados
+Barbuda
+Barbuda (Antigua and Barbuda)
+Barthelemy
+Barthelemy (Guadeloupe)
+Belarus
+Belgium
+Belize
+Benin
+Bermuda
+Bhutan
+Bismark Archipelago
+Bismark Archipelago (Papua New Guinea)
+Bolivia
+Bonaire
+Bonaire (Netherlands Antilles)
+Borabora
+Borabora (French Polynesia)
+Borneo (Indonesia)
+Borneo (Kalimantan) (Indonesia)
+Borneo (North) (Malaysia)
+Bosnia-Herzegovina
+Botswana
+Bougainville
+Bougainville (Papua New Guinea)
+Bourbon
+Bourbon (Reunion)
+Brazil
+British Columbia (Canada)
+British Guiana
+British Guiana (Guyana)
+British Honduras
+British Honduras (Belize)
+British Virgin Islands
+Brunei Darussalam
+Buka
+Buka (Papua New Guinea)
+Bulgaria
+Burkina Faso
+Burma
+Burundi
+Caicos Islands
+Caicos Islands (Turks and Caicos Islands)
+Cambodia
+Cameroon
+Canada
+Canary Islands
+Canary Islands (Spain)
+Canton Island
+Canton Island (Kiribati)
+Cape Verde
+Cayman Islands
+Central African Republic
+Ceuta
+Ceuta (Spain)
+Ceylon
+Ceylon (Sri Lanka)
+Chad
+Chaferinas Islands
+Chaferinas Islands (Spain)
+Chalki
+Chalki (Greece)
+Channel Islands
+Channel Islands (Jersey, Guernsey, Alderney and Sark)
+Chile
+China
+Christiansted, US Virgin Islands
+Christmas Island (Australia)
+Christmas Island (Kiribati)
+Chuuk (Truk), Micronesia
+Cocos Island 
+Cocos Island (Australia)
+Colombia
+Commonwealth of the Northern Mariana Islands
+Comoros
+Congo (Brazzaville),Republic of the
+Congo, Democratic Republic of the
+Cook Islands
+Cook Islands (New Zealand)
+Corisco Island 
+Corisco Island (Equatorial Guinea)
+Corsica
+Corsica (France)
+Costa Rica
+Cote d Ivoire
+Cote d Ivoire (Ivory Coast)
+Crete
+Crete (Greece)
+Croatia
+Cuba
+Cumino Island
+Cumino Island (Malta)
+Curacao
+Curacao (Netherlands Antilles)
+Cyjrenaica
+Cyjrenaica (Libya)
+Cyprus
+Czech Republic
+Dahomey
+Dahomey (Benin)
+Damao
+Damao (India)
+Danger Islands
+Danger Islands (New Zealand)
+Democratic People's Republic of Korea
+Democratic Republic of the Congo
+Denmark
+Desirade Island
+Desirade Island (Guadeloupe)
+Diu
+Diu (India)
+Djibouti
+Dodecanese Islands
+Dodecanese Islands (Greece)
+Doha
+Doha (Qatar)
+Dominica
+Dominican Republic
+Dubai
+Dubai (United Arab Emirates)
+East Timor
+East Timor (Indonesia)
+Eastern Island, Midway Islands
+Ebeye, Marshall Islands
+Ecuador
+Egypt
+Eire
+Eire (Ireland)
+El Salvador
+Ellice Islands
+Ellice Islands (Tuvalu)
+Elobey Islands
+Elobey Islands (Equatorial Guinea)
+Enderbury Island
+Enderbury Island (Kiribati)
+England
+England (Great Britain and Northern Ireland)
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fakaofo
+Fakaofo (Western Samoa)
+Falkland Islands
+Fanning Island
+Fanning Island (Kiribati)
+Faroe Islands
+Federated States of Micronesia
+Fernando Po
+Fernando Po (Equatorial Guinea)
+Fezzan
+Fezzan (Libya)
+Fiji
+Finland
+Formosa
+Formosa (Taiwan)
+France
+France, Metropolitan (France)
+Frederiksted, US Virgin Islands
+French Guiana
+French Oceania
+French Oceania (French Polynesia)
+French Polynesia
+French Somaliland
+French Somaliland (Djibouti)
+French Territory of the Afars and Issas (Djibouti)
+French West Indies
+French West Indies (Guadeloupe or Martinique)
+French West Indies (Martinique)
+Friendly Islands
+Friendly Islands (Tonga)
+Fujairah
+Fujairah (United Arab Emirates)
+Futuna
+Futuna (Wallis and Futuna Islands)
+Gabon
+Gambia
+Gambier
+Gambier (French Polynesia)
+Georgia, Republic of
+Germany
+Ghana
+Gibraltar
+Gilbert Islands
+Gilbert Islands (Kiribati)
+Goa
+Goa (India)
+Gozo Island
+Gozo Island (Malta)
+Grand Comoro
+Grand Comoro (Comoros)
+Great Britain
+Great Britain and Northern Ireland
+Greece
+Greenland
+Grenada
+Grenadines
+Grenadines (St. Vincent and the Grenadines)
+Guadeloupe
+Guam
+Guatemala
+Guernsey
+Guernsey, Channel Islands (Great Britain)
+Guinea
+Guinea-Bissau
+Guyana
+Hainan Island
+Hainan Island (China)
+Haiti
+Hashemite Kingdom
+Hashemite Kingdom (Jordan)
+Hervey
+Hervey (Cook Islands) (New Zealand)
+Hivaoa
+Hivaoa (French Polynesia)
+Holland
+Holland (Netherlands)
+Honduras
+Hong Kong
+Howard Island
+Huahine
+Huahine (French Polynesia)
+Huan Island
+Huan Island (New Caledonia)
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland
+Irian Barat
+Irian Barat (Indonesia)
+Isle of Man
+Isle of Man (Great Britain)
+Isle of Pines
+Isle of Pines
+Isle of Pines (New Caledonia)
+Isle of Pines, West Indies (Cuba)
+Israel
+Issas
+Italy
+Jamaica
+Japan
+Jarvis Island
+Jersey
+Jersey (Channel Islands) (Great Britain)
+Johnston Island
+Johore
+Johore (Malaysia)
+Jordan
+Kalimantan
+Kalymnos
+Kalymnos (Greece)
+Kampuchea
+Kampuchea (Cambodia)
+Karpathos
+Karpathos (Greece)
+Kassos
+Kassos (Greece)
+Kastellorizon
+Kastellorizon (Greece)
+Kazakhstan
+Kedah
+Kedah (Malaysia)
+Keeling Islands
+Keeling Islands (Australia)
+Kelantan
+Kelantan (Malaysia)
+Kenya
+Kingman Reef
+Kingshill, US Virgin Islands
+Kiribati
+Korea, Democratic Peoples Republic of (North Korea)
+Korea, Republic of (South Korea)
+Koror
+Kos
+Kos (Greece)
+Kosrae, Micronesia
+Kowloon
+Kowloon (Hong Kong)
+Kuwait
+Kwajalein, Marshall Islands
+Kyrgyzstan
+Labrador 
+Labrador (Canada)
+Labuan 
+Labuan (Malaysia)
+Laos
+Latvia
+Lebanon
+Leipsos
+Leipsos (Greece)
+Leros
+Leros (Greece)
+Les Saints Island
+Les Saints Island (Guadeloupe)
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Lord Howe Island 
+Lord Howe Island (Australia)
+Loyalty Islands 
+Loyalty Islands (New Caledonia)
+Luxembourg
+Macao
+Macau
+Macau (Macao)
+Macedonia, Republic of
+Madagascar
+Madeira Islands
+Madeira Islands (Portugal)
+Maderia Islands
+Majuro, Marshall Islands
+Malacca
+Malacca (Malaysia)
+Malagasy Republic
+Malagasy Republic (Madagascar)
+Malawi
+Malaya 
+Malaya (Malaysia)
+Malaysia
+Maldives
+Mali
+Malta
+Manahiki
+Manahiki (New Zealand)
+Manchuria
+Manchuria (China)
+Mangaia
+Mangaia (Cook Islands) (New Zealand)
+Manitoba (Canada)
+Manua Islands, American Samoa
+Manuai
+Manuai (Cook Islands) (New Zealand)
+Marie Galante
+Marie Galante (Guadeloupe)
+Marquesas Islands
+Marquesas Islands (French Polynesia)
+Marshall Islands
+Martinique
+Mauke
+Mauke (Cook Islands) (New Zealand)
+Mauritania
+Mauritius
+Mayotte
+Mayotte (France)
+Melilla
+Melilla (Spain)
+Mexico
+Micronesia, Federated States of
+Midway Island
+Midway Islands
+Miquelon
+Miquelon (St. Pierre and Miquelon)
+Mitiaro
+Mitiaro (Cook Islands) (New Zealand)
+Moheli
+Moheli (Comoros)
+Moldova
+Monaco
+Monaco (France)
+Mongolia
+Montserrat
+Moorea
+Moorea (French Polynesia)
+Morocco
+Mozambique
+Muscat
+Muscat (Oman)
+Myanmar
+Myanmar (Burma)
+Namibia
+Nansil Islands
+Nansil Islands (Ryukyu Islands) (Japan)
+Nauru
+Navassa Island
+Negri Sembilan
+Negri Sembilan (Malaysia)
+Nepal
+Netherlands
+Netherlands Antilles
+Netherlands Antilles (Aruba)
+Netherlands Antilles (Bonaire)
+Netherlands Antilles (Curacao)
+Netherlands Antilles (St. Maarten)
+Netherlands West Indies
+Netherlands West Indies (Netherlands Antilles)
+Nevis
+Nevis (St. Christopher and Nevis)
+New Britain
+New Britain (Papua New Guinea)
+New Brunswick (Canada)
+New Caledonia
+New Hanover
+New Hanover (Papua New Guinea)
+New Hebrides
+New Hebrides (Vanuatu)
+New Ireland
+New Ireland (Papua New Guinea)
+New South Wales
+New South Wales (Australia)
+New Zealand
+Newfoundland
+Newfoundland (Canada)
+Nicaragua
+Niger
+Nigeria
+Nissiros
+Nissiros (Greece)
+Niue
+Niue (New Zealand)
+Norfolk Island
+Norfolk Island (Australia)
+North Borneo
+North Borneo (Malaysia)
+North Korea
+North Korea (Korea, Democratic People's Republic of)
+Northern Ireland
+Northern Ireland (Great Britain and Northern Ireland)
+Northern Mariana Islands, Commonwealth of
+Northwest Territory (Canada)
+Norway
+Nova Scotia (Canada)
+Nukahiva
+Nukahiva (French Polynesia)
+Nukunonu
+Nukunonu (Western Samoa)
+Nyasaland
+Nyasaland (Malawi)
+Ocean Island
+Ocean Island (Kiribati)
+Okinawa
+Okinawa (Japan)
+Okinawa (Ryukyu Islands) (Japan)
+Oman
+Ontario (Canada)
+Pago Pago, American Samoa
+Pahang
+Pahang (Malaysia)
+Pakistan
+Palau
+Palmerston
+Palmerston (Avarua) (New Zealand)
+Palmyra Island
+Panama
+Papua New Guinea
+Paraguay
+Parry
+Parry (Cook Islands) (New Zealand)
+Patmos
+Patmos (Greece)
+Pemba
+Pemba (Tanzania)
+Penang
+Penang (Malaysia)
+Penghu Islands
+Penghu Islands (Taiwan)
+Penon de Velez de la Gomera
+Penon de Velez de la Gomera (Spain)
+Penrhyn
+Penrhyn (Tongareva) (New Zealand)
+Perak
+Perak (Malaysia)
+Perlis
+Perlis (Malaysia)
+Persia
+Persia (Iran)
+Peru
+Pescadores Islands
+Pescadores Islands (Taiwan)
+Petite Terre
+Petite Terre (Guadeloupe)
+Philippines
+Pitcairn Island
+Pohnpei, Micronesia
+Poland
+Portugal
+Prince Edward Island (Canada)
+Province Wellesley
+Province Wellesley (Malaysia)
+Puerto Rico
+Pukapuka
+Pukapuka (New Zealand)
+Qatar
+Quebec (Canada)
+Queensland
+Queensland (Australia)
+Quemoy
+Quemoy (Taiwan)
+Raiatea
+Raiatea (French Polynesia)
+Rakaanga
+Rakaanga (New Zealand)
+Rapa
+Rapa (French Polynesia)
+Rarotonga
+Rarotonga (Cook Islands) (New Zealand)
+Ras al Kaimah
+Ras al Kaimah (United Arab Emirates)
+Redonda
+Redonda (Antigua and Barbuda)
+Republic of Georgia
+Republic of Korea
+Republic of the Congo
+Republic of the Marshall Islands
+Reunion
+Rhodesia
+Rhodesia (Zimbabwe)
+Rio Muni
+Rio Muni (Equatorial Guinea)
+Rodos
+Rodos (Greece)
+Rodrigues
+Rodrigues (Mauritius)
+Romania
+Rota, Northern Mariana Islands
+Russia
+Rwanda
+Saba
+Saba (Netherlands Antilles)
+Sabah
+Sabah (Malaysia)
+Saint Bartholomew
+Saint Bartholomew (Guadeloupe)
+Saint Christopher (St. Kitts) and Nevis
+Saint Christopher and Nevis 
+Saint Croix, US Virgin Islands
+Saint Eustatius
+Saint Eustatius (Netherlands Antilles)
+Saint Helena
+Saint John, US Virgin Islands
+Saint Kitts
+Saint Kitts (St. Christopher and Nevis)
+Saint Lucia
+Saint Maarten
+Saint Maarten (Netherlands Antilles)
+Saint Martin (France)
+Saint Martin (French part) (Guadeloupe)
+Saint Martin (Netherlands part)(Netherlands Antilles)
+Saint Martin (Netherlands)
+Saint Pierre and Miquelon
+Saint Thomas, US Virgin Islands
+Saint Vincent and the Grenadines
+Sainte Marie de Madagascar (Madagascar)
+Saipan, Northern Mariana Islands
+Salvador
+Salvador (El Salvador)
+San Marino
+Sand Island, Midway Islands
+Santa Cruz Islands
+Santa Cruz Islands (Solomon Island)
+Sao Tome and Principe
+Sarawak
+Sarawak (Malaysia)
+Sark
+Sark, Channel Islands (Great Britain)
+Saskatchewan (Canada)
+Saudi Arabia
+Savage Island
+Savage Island (Niue) (New Zealand)
+Savaii Island
+Savaii Island (British) (Western Samoa)
+Scotland
+Scotland (Great Britain and Northern Ireland)
+Selangor
+Selangor (Malaysia)
+Senegal
+Serbia-Montenegro
+Seychelles
+Sharja
+Sharja (United Arab Emirates)
+Shikoku
+Shikoku (Japan)
+Siam
+Siam (Thailand)
+Sierra Leone
+Sikkim
+Sikkim (India)
+Singapore
+Slovak Republic
+Slovenia
+Society Islands
+Society Islands (French Polynesia)
+Solomon Islands
+Somali Democratic Republic
+Somali Democratic Republic (Somalia)
+Somalia
+Somaliland
+Somaliland (Somalia)
+South Africa
+South Australia
+South Australia (Australia)
+South Georgia
+South Georgia (Falkland Islands)
+South Korea
+South Korea (Korea, Republic of)
+South-West Africa
+South-West Africa (Namibia)
+Spain
+Spitzbergen
+Spitzbergen (Norway)
+Sri Lanka
+St. Barthelemy
+St. Eustatius (Netherlands Antilles)
+St. Kitts
+St. Lucia
+St. Maarten (Netherlands Antilles)
+St. Martin (Guadeloupe)
+St. Vincent
+Ste. Marie de Madagascar
+Ste. Marie de Madagascar (Madagascar)
+Sudan
+Suriname
+Suwarrow Islands
+Suwarrow Islands (New Zealand)
+Swain's Island, American Samoa
+Swan Islands
+Swan Islands (Honduras)
+Swaziland
+Sweden
+Switzerland
+Symi
+Symi (Greece)
+Syrian Arab Republic
+Tahaa
+Tahaa (French Polynesia)
+Tahiti
+Tahiti (French Polynesia)
+Taiwan
+Tajikistan
+Tanzania
+Tasmania
+Tasmania (Australia)
+Tchad
+Tchad (Chad)
+Thailand
+Thursday Island
+Thursday Island (Australia)
+Tibet
+Tibet (China)
+Tilos
+Tilos (Greece)
+Timor
+Timor (Indonesia)
+Tinian, Northern Mariana Islands
+Tobago
+Tobago (Trinidad and Tobago)
+Togo
+Tokelau (Union) Group (Western Samoa)
+Tokelau Group
+Tonga
+Tongareva
+Tongareva (New Zealand)
+Tori Shima
+Tori Shima (Ryukyu Islands) (Japan)
+Torres Island
+Torres Island (Vanuatu)
+Trans-Jordan
+Trans-Jordan (Hashemite Kingdom) (Jordan)
+Transkei
+Transkei (South Africa)
+Trengganu
+Trengganu (Malaysia)
+Trinidad and Tobago
+Tripolitania
+Tripolitania (Libya)
+Tristan da Cunha
+Trucial States
+Trucial States (United Arab Emirates)
+Truk (See Chuuk Island)
+Tuamotou
+Tuamotou (French Polynesia)
+Tubuai
+Tubuai (French Polynesia)
+Tunisia
+Turkey
+Turkmenistan
+Turks and Caicos Islands
+Tutuila Island, American Samoa
+Tuvalu
+U.S. Virgin Islands
+Uganda
+Ukraine
+Umm al Quaiwain
+Umm al Quaiwain (United Arab Emirates)
+Umm Said
+Umm Said (Qatar)
+Union Group
+Union Group (Western Samoa)
+United Arab Emirates
+United Kingdom
+United Nations, New York
+United States
+Upolu Island
+Upolu Island (Western Samoa)
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Victoria
+Victoria (Australia)
+Vietnam
+Virgin Islands
+Virgin Islands (British)
+Wake Island
+Wales
+Wales (Great Britain and Northern Ireland)
+Wallis and Futuna Islands
+Wellesley
+Wellesley, Province (Malaysia)
+West New Guinea
+West New Guinea (Indonesia)
+Western Australia
+Western Australia (Australia)
+Western Samoa
+Yap, Micronesia
+Yemen
+Yugoslavia
+Yugoslavia (see individual republics)
+Yukon Territory (Canada)
+Zafarani Islands
+Zafarani Islands (Spain)
+Zaire (Congo Dem Rep)
+Zambia
+Zanzibar
+Zanzibar (Tanzania)
+Zimbabwe
