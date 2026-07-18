@@ -1,0 +1,26 @@
+#cloud-config
+# Bootstraps the box: Docker + the Foodmart Compose stack.
+package_update: true
+package_upgrade: false
+
+write_files:
+  # Persist the public domain so docker-compose / Caddy can read it.
+  - path: /opt/foodmart.env
+    content: |
+      DOMAIN=${domain}
+
+runcmd:
+  # OCI's Ubuntu image ships iptables rules that block everything but SSH —
+  # open the web ports before anything else.
+  - iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+  - iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT
+  - netfilter-persistent save || (apt-get install -y iptables-persistent && netfilter-persistent save)
+
+  # Install Docker Engine + Compose plugin.
+  - curl -fsSL https://get.docker.com | sh
+  - usermod -aG docker ubuntu
+
+  # Clone the repo and bring up the stack.
+  - git clone ${repo_url} /opt/foodmart-app
+  - cp /opt/foodmart.env /opt/foodmart-app/deploy/.env
+  - cd /opt/foodmart-app/deploy && docker compose up -d

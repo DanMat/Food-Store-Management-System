@@ -1,0 +1,19 @@
+# Copy to terraform.tfvars and fill in. terraform.tfvars is gitignored.
+
+# --- OCI (from Console > Profile > API Keys, and Tenancy/User details) ---
+tenancy_ocid     = "ocid1.tenancy.oc1..xxxx"
+user_ocid        = "ocid1.user.oc1..xxxx"
+fingerprint      = "aa:bb:cc:..."
+private_key_path = "~/.oci/oci_api_key.pem"
+region           = "us-ashburn-1"
+compartment_ocid = "ocid1.tenancy.oc1..xxxx" # tenancy OCID is fine for a free account
+
+# --- Instance (within Always-Free ARM budget: 4 OCPU / 24 GB total) ---
+instance_ocpus     = 2
+instance_memory_gb = 12
+ssh_public_key     = "ssh-ed25519 AAAA... you@host" # contents of your ~/.ssh/id_ed25519.pub
+
+# --- Cloudflare (danmat.dev zone) ---
+cloudflare_api_token = "your-cloudflare-api-token" # Zone.DNS edit on danmat.dev
+cloudflare_zone_id   = "your-danmat.dev-zone-id"   # DNS page > right sidebar > Zone ID
+subdomain            = "foodmart"
