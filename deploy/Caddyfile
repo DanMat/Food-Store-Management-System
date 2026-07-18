@@ -1,0 +1,21 @@
+# Caddy = TLS termination + gzip + static file server + load balancer.
+# For a real domain it auto-provisions a Let's Encrypt cert; for "localhost"
+# it uses Caddy's internal CA.
+{$DOMAIN} {
+	encode zstd gzip
+	root * /var/www/html
+
+	# Round-robin every PHP request across the two FPM app nodes. This is the
+	# modern equivalent of the old Apache mod_proxy_balancer "switcher".
+	php_fastcgi app1:9000 app2:9000 {
+		lb_policy round_robin
+		lb_try_duration 2s
+	}
+
+	file_server
+	header -Server
+	log {
+		output stdout
+		format console
+	}
+}

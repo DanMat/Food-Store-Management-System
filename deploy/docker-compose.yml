@@ -1,0 +1,124 @@
+# Dragonix Foodmart — modern architecture.
+#
+#            ┌─────────── Caddy (LB + auto-HTTPS + gzip) ───────────┐
+#   client ──▶  round-robins FastCGI across two PHP-8 app nodes      │
+#            └──────────────┬───────────────────┬───────────────────┘
+#                        app1 (app-1)        app2 (app-2)
+#                           │  writes ▲          │
+#                    reads ▼          │ writes   ▼ reads
+#                   db-replica ◀──repl── db-primary        redis (cache + sessions)
+#
+name: foodmart
+
+services:
+  # ---- Load balancer / TLS / static / FastCGI round-robin ----
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMAIN: ${DOMAIN:-localhost}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ../Dragonix_Foodmart:/var/www/html:ro   # serve static assets + route .php
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on: [app1, app2]
+
+  # ---- Two identical PHP-FPM app nodes (the load-balanced "webheads") ----
+  app1:
+    build: { context: .., dockerfile: deploy/app.Dockerfile }
+    restart: unless-stopped
+    environment: &app_env
+      APP_NODE: app-1
+      DB_WRITE_HOST: db-primary
+      DB_READ_HOST: db-replica
+      DB_NAME: cart
+      DB_USER: foodmart
+      DB_PASS: ${DB_APP_PASSWORD:-foodmart}
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+    volumes:
+      - ../Dragonix_Foodmart:/var/www/html
+    depends_on:
+      db-primary: { condition: service_healthy }
+      redis: { condition: service_started }
+
+  app2:
+    build: { context: .., dockerfile: deploy/app.Dockerfile }
+    restart: unless-stopped
+    environment:
+      <<: *app_env
+      APP_NODE: app-2
+    volumes:
+      - ../Dragonix_Foodmart:/var/www/html
+    depends_on:
+      db-primary: { condition: service_healthy }
+      redis: { condition: service_started }
+
+  # ---- MySQL primary (writes) ----
+  db-primary:
+    image: mysql:8.4
+    restart: unless-stopped
+    command: --server-id=1 --log-bin=mysql-bin --gtid-mode=ON --enforce-gtid-consistency=ON --binlog-format=ROW
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpw}
+      MYSQL_DATABASE: cart
+      MYSQL_USER: foodmart
+      MYSQL_PASSWORD: ${DB_APP_PASSWORD:-foodmart}
+    volumes:
+      - db_primary_data:/var/lib/mysql
+      - ../sql/cart.sql:/docker-entrypoint-initdb.d/10-schema.sql:ro
+      - ./mysql/primary-init.sql:/docker-entrypoint-initdb.d/20-replication.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${DB_ROOT_PASSWORD:-rootpw}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  # ---- MySQL replica (reads) — replicates from the primary via GTID ----
+  db-replica:
+    image: mysql:8.4
+    restart: unless-stopped
+    command: --server-id=2 --gtid-mode=ON --enforce-gtid-consistency=ON --read-only=ON
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpw}
+      MYSQL_ROOT_HOST: "%"   # allow the setup sidecar to connect over the network
+    volumes:
+      - db_replica_data:/var/lib/mysql
+    depends_on:
+      db-primary: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${DB_ROOT_PASSWORD:-rootpw}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  # ---- One-shot: point the replica at the primary once both are healthy ----
+  # (initdb.d can't do this — its temporary server has networking disabled.)
+  replica-setup:
+    image: mysql:8.4
+    restart: "no"
+    environment:
+      DB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-rootpw}
+      DB_APP_PASSWORD: ${DB_APP_PASSWORD:-foodmart}
+    volumes:
+      - ./mysql/setup-replica.sh:/setup-replica.sh:ro
+    entrypoint: ["sh", "/setup-replica.sh"]
+    depends_on:
+      db-primary: { condition: service_healthy }
+      db-replica: { condition: service_healthy }
+
+  # ---- Redis: query/object cache + PHP sessions ----
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--save", "", "--maxmemory", "128mb", "--maxmemory-policy", "allkeys-lru"]
+
+volumes:
+  db_primary_data:
+  db_replica_data:
+  caddy_data:
+  caddy_config:
