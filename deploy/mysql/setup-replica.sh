@@ -9,11 +9,10 @@ until mysqladmin ping -h db-replica -uroot -p"$DB_ROOT_PASSWORD" --silent 2>/dev
 done
 
 echo "Configuring replication (db-primary -> db-replica)..."
+# NOTE: do NOT pre-create the app user here — replication replays the primary's
+# own CREATE USER (from the initdb), and a duplicate would stop the SQL thread.
+# The schema, the foodmart account, and its grants all arrive via replication.
 mysql -h db-replica -uroot -p"$DB_ROOT_PASSWORD" <<SQL
--- Read-only app account (reads hit the replica). Schema arrives via replication.
-CREATE USER IF NOT EXISTS 'foodmart'@'%' IDENTIFIED WITH caching_sha2_password BY '$DB_APP_PASSWORD';
-GRANT SELECT ON cart.* TO 'foodmart'@'%';
-
 STOP REPLICA;
 RESET REPLICA ALL;
 CHANGE REPLICATION SOURCE TO

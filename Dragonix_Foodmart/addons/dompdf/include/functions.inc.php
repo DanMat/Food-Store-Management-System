@@ -113,7 +113,7 @@ function build_url($protocol, $host, $base_path, $url) {
     $base_path = realpath($base_path);
   }
   
-  if ( $url{0} === "/" )
+  if ( $url[0] === "/" )
     // Absolute path
     $ret .= $host . $url;
   else {
@@ -248,16 +248,16 @@ function dec2roman($num) {
   switch (mb_strlen($num)) {
 
   case 4:
-    $ret .= $thou[$num{3}];
+    $ret .= $thou[$num[3]];
 
   case 3:
-    $ret .= $hund[$num{2}];
+    $ret .= $hund[$num[2]];
 
   case 2:
-    $ret .= $tens[$num{1}];
+    $ret .= $tens[$num[1]];
 
   case 1:
-    $ret .= $ones[$num{0}];
+    $ret .= $ones[$num[0]];
 
   default:
     break;
