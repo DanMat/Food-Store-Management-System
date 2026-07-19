@@ -1,0 +1,13 @@
+{
+  "name": "dragonix-foodmart",
+  "private": true,
+  "description": "Front-end build for the modernized Dragonix Foodmart storefront.",
+  "scripts": {
+    "css:build": "sass assets/scss/main.scss Dragonix_Foodmart/templates/bootstrap/modern.css --style=compressed --no-source-map",
+    "css:dev": "sass assets/scss/main.scss Dragonix_Foodmart/templates/bootstrap/modern.css --style=expanded --embed-source-map",
+    "css:watch": "sass --watch assets/scss/main.scss:Dragonix_Foodmart/templates/bootstrap/modern.css --style=expanded"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

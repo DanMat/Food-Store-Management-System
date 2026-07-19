@@ -44,3 +44,6 @@ Temporary Items
 
 # local env for the deploy stack
 deploy/.env
+
+# node deps (front-end build)
+node_modules/

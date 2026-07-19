@@ -13,8 +13,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $template_dir."/".$template."/"; ?>stylesheet.css" />
 	<link rel="stylesheet" href="addons/lightbox/lightbox.css" type="text/css" media="screen" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<!-- Modern UI refresh (overrides the legacy theme) -->
-	<link rel="stylesheet" type="text/css" href="<?php echo $template_dir."/".$template."/"; ?>modern.css" />
+	<!-- Modern UI refresh (overrides the legacy theme). ?v=mtime busts the cache on rebuild. -->
+	<link rel="stylesheet" type="text/css" href="<?php echo $template_dir."/".$template."/modern.css?v=".@filemtime($template_dir."/".$template."/modern.css"); ?>" />
 	<script type="text/javascript" src="addons/lightbox/lightbox.js"></script>
 
 </head>

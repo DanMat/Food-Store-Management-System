@@ -1,0 +1,23 @@
+// Design tokens — the single source of truth for the storefront's look.
+
+// Sass variables (compile-time)
+$brand:      #2e7d32; // fresh grocery green
+$brand-ink:  #1b5e20;
+$accent:     #f0932b; // warm produce orange
+$radius:     12px;
+$breakpoint: 900px;
+
+// CSS custom properties (runtime)
+:root {
+  --bg: #f6f7f4;
+  --surface: #ffffff;
+  --ink: #1f2a24;
+  --muted: #6b7770;
+  --line: #e4e8e2;
+  --brand: #{$brand};
+  --brand-ink: #{$brand-ink};
+  --accent: #{$accent};
+  --radius: #{$radius};
+  --shadow: 0 1px 2px rgba(0, 0, 0, .04), 0 6px 20px rgba(31, 42, 36, .06);
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
