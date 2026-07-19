@@ -94,9 +94,9 @@
 
 		     $counter = 0;
 		     while (!$searchitem[$counter] == NULL){
-				$searchquery .= "((DESCRIPTION LIKE '%" . $searchitem[$counter] . "%') OR (PRODUCTID LIKE '%" . $searchitem[$counter] . "%'))";
+				$searchquery .= "((DESCRIPTION LIKE '%" . mysql_real_escape_string($searchitem[$counter]) . "%') OR (PRODUCTID LIKE '%" . mysql_real_escape_string($searchitem[$counter]) . "%'))";
 				$counter += 1;
-				if (!$searchitem[$counter] == NULL) { $searchquery .= " ".$searchmethod." "; }
+				if (!$searchitem[$counter] == NULL) { $searchquery .= (strtoupper(trim($searchmethod)) === "OR" ? " OR " : " AND "); }
 	   	     }
 	         $searchquery .= ")";
 		 }

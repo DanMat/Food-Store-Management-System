@@ -12,6 +12,9 @@ if (!defined('MYSQL_NUM'))   define('MYSQL_NUM',   PDO::FETCH_NUM);
 if (!defined('MYSQL_BOTH'))  define('MYSQL_BOTH',  PDO::FETCH_BOTH);
 
 $GLOBALS['__mysql_last_error'] = '';
+// Read-your-writes: once this request has written to the primary, its later
+// reads must hit the primary too (the replica may still be catching up).
+$GLOBALS['__db_wrote'] = false;
 
 function mysql_connect($host = null, $user = null, $pass = null)
 {
@@ -32,8 +35,13 @@ function mysql_error($link = null): string
 function mysql_query($sql, $link = null)
 {
     $isRead = (bool) preg_match('/^\s*\(?\s*(SELECT|SHOW|DESCRIBE|EXPLAIN)\b/i', (string) $sql);
-    $pdo    = db_pdo($isRead ? 'read' : 'write');
-    $stmt   = $pdo->query($sql);
+    // Reads use the replica ONLY if this request hasn't written yet.
+    $useReplica = $isRead && !$GLOBALS['__db_wrote'];
+    if (!$isRead) {
+        $GLOBALS['__db_wrote'] = true;
+    }
+    $pdo  = db_pdo($useReplica ? 'read' : 'write');
+    $stmt = $pdo->query($sql);
     if ($stmt === false) {
         $info = $pdo->errorInfo();
         $GLOBALS['__mysql_last_error'] = $info[2] ?? 'query error';

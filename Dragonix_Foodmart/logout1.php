@@ -9,7 +9,7 @@
                  <body><br /><br /><br /><br /><br /><br /><br />
                  <h4><?php echo $txt['logout1'] ?></h4>
 				 <script>
-					 window.location.href = "https://127.0.0.1:80/cart/mobile.php";
+					 window.location.href = "mobile.php";
 					 </script>
 				 </body></html>
 				<?php
